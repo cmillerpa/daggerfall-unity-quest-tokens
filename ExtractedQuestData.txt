@@ -1,0 +1,1173 @@
+==================================================
+DAGGERFALL UNITY AUTOMATED RESOURCE REPORT
+Generated on: 8/26/2026 5:57:38 PM
+==================================================
+
+--- MACROS (37 Unique) ---
+%cn        -> Player's current character class name (e.g., Mage, Warrior)
+%crn       -> Player's current rank name within a guild or faction
+%dat       -> Current in-game calendar date string
+%di        -> Compass direction to the last referenced quest destination location
+%dng       -> Name of the target quest dungeon, crypt, or cave system
+%fn        -> Player's character first name string
+%g         -> Lowercase subjective gender pronoun for player (he / she)
+%G         -> Capitalized subjective gender pronoun for player (He / She)
+%g1        -> Lowercase objective gender pronoun for player (him / her)
+%G1        -> Capitalized objective gender pronoun for player (Him / Her)
+%g2        -> Lowercase possessive gender pronoun for player (his / hers)
+%g2self    -> Lowercase reflexive gender pronoun for player (himself / herself)
+%g3        -> Alternative lowercase possessive gender layout string (his / her)
+%G3        -> Alternative capitalized possessive gender layout string (His / Her)
+%god       -> Name of the local deity or temple god worshiped in the current region
+%jok       -> Randomized joke phrase or regional rumor spoken by an NPC
+%kno       -> Name of the active Knightly Order or military guild in the region
+%loc       -> Generic location type description (e.g., town, tavern, shop, temple)
+%mn        -> Specific structural name of a dungeon or location layout module
+%n         -> Target NPC's common name or short label identifier
+%nam       -> Full formal name of the target NPC or quest contact
+%nrn       -> Faction rank name of the NPC you are actively speaking with
+%oth       -> Context-sensitive placeholder value for structural variables
+%pcf       -> Formal title or faction grouping greeting used for the player
+%pcn       -> Player's full custom character layout name
+%pct       -> Player's current title rank inside a specific active faction
+%pg3       -> Engine variant possessive gender modifier string
+%qdat      -> Explicit calendar day/date when the current quest was accepted
+%qdt       -> Concrete expiration date/time details remaining before quest failure
+%ra        -> Race of the player character (e.g., Breton, Nord, Redguard)
+%reg       -> Name of the current political province or region (e.g., Daggerfall)
+%rn        -> Target name reference index or regional network tracking label
+%rt        -> Structural building layout type of the target location (e.g., Palace, Hovel)
+%t         -> Name of the target destination town, village, or settlement city
+%thd       -> Direct address honorific title used by an NPC to you (e.g., Sir, My Lord)
+%vam       -> Name of a specific vampire clan associated with the current region
+
+%vcn       -> Vampire NPC Clan (Outputs the specific vampire clan name of the target NPC)
+
+--- FORMATTING TAGS (1 Unique) ---
+<<ce>       -> Center Text (Forces the trailing text line to align to the center of the UI window)
+
+--- QUEST SYMBOLS (1101 Unique) ---
+___
+_apo_          -> Apothecary (Location identifier for a potion or herbalist shop) **[Location]**
+_childhouse_   -> Residence location of a child NPC target or contact **[Location]**
+_contact_      -> The intermediate NPC contact required to advance the quest **[NPC]**
+_mondung_      -> Monster Dungeon (Specific target dungeon populated by monsters) **[Location]**
+_newplace_     -> A dynamically designated target location or town structure **[Location]**
+_qgiver_       -> Quest Giver (Alternative identifier string for the primary questor) **[NPC]**
+_questgiver_   -> Quest Giver (The main NPC who hands out the job and rewards) **[NPC]**
+_safehouse_    -> Safehouse (A hideout, secure residence, or drop-off location) **[Location]**
+_shedungent_   -> Shedu Dungeon (A specific high-level or custom quest dungeon layout) **[Location]**
+_tavern_       -> Tavern (A local inn or public drinking establishment location) **[Location]**
+_temple_       -> Temple (A local regional religious institution building) **[Location]**
+_TestBuilding_ -> Test Building (A developer layout testing location hook) **[Location]**
+_agent_        -> Undercover or faction agent NPC involved in the quest plot **[NPC]**
+_alchemist_    -> Alchemist (An alchemical shop merchant or individual NPC target) **[NPC]**
+_apo_          -> Apothecary (Alternative variable mapping for a potion store/NPC) **[Location]**
+_apothecary_   -> Apothecary (The specific potion merchant or shop structure) **[Location]**
+_barmaid_      -> Barmaid (A specific tavern employee NPC contact) **[NPC]**
+_bookstore_    -> Bookstore (A local bookstore or scroll shop location target) **[Location]**
+_bowdung_      -> Bow Dungeon (A localized target dungeon layout variant) **[Location]**
+_casfort_      -> Castle Fort (A heavily guarded castle or regional fortification) **[Location]**
+_chemist_      -> Chemist (An alternative label for an alchemist or potion seller) **[NPC]**
+_competitor_   -> Competitor (A rival NPC merchant, guild member, or antagonist) **[NPC]**
+_contact_      -> Target Contact (Primary link NPC variable reference) **[NPC]**
+_contact1_     -> First Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_contact2_     -> Second Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_contactdung_  -> Contact Dungeon (The target dungeon location where a contact resides) **[Location]**
+_cousin_       -> Cousin (A relative NPC target, hostage, or quest contact) **[NPC]**
+_crypt_        -> Crypt (A graveyard vault, tomb, or minor undead dungeon structure) **[Location]**
+_darkb_        -> Dark Brotherhood (A generic Dark Brotherhood faction hook or location) **[Faction] [Location]**
+_darkbmember_  -> Dark Brotherhood Member (An assassin NPC target or contact) **[NPC]**
+_db_           -> Dark Brotherhood (Shorthand variable for a Dark Brotherhood resource) **[Faction]**
+_decoy_        -> Decoy (A fake item, trap object, or misleading NPC target) **[NPC] [Item]**
+_dummy_        -> Dummy (A placeholder resource layout wrapper used for scripting checks) **[Trigger]**
+
+_dungeon_      -> Target dungeon, crypt, or cave system where the quest takes place **[Location]**
+_dungeon1_     -> First target dungeon (used in multi-dungeon or multi-stage quests) **[Location]**
+_dungeon2_     -> Second target dungeon location **[Location]**
+_dungeon3_     -> Third target dungeon location **[Location]**
+_endbuilding_  -> The final destination building or delivery location to finish the quest **[Location]**
+_fakedung_     -> Fake Dungeon (A misleading dungeon location used to trick the player) **[Location]**
+_father_       -> Father (A specific parental NPC target, contact, or hostage) **[NPC]**
+_fatherdung_   -> Father Dungeon (The specific dungeon where the father NPC is located) **[Location]**
+_giver_        -> Alternative short variable mapping for the primary quest giver **[NPC]**
+_graveyard_    -> Graveyard (A regional burial ground location resource) **[Location]**
+_guard_        -> Guard (A defensive city soldier, hostile guard, or protector NPC) **[NPC] [Combat]**
+_guardian_     -> Guardian (A specific protector entity guarding a quest objective) **[NPC] [Combat]**
+_healer_       -> Healer (A temple restoration merchant or healing NPC contact) **[NPC]**
+_hideout_      -> Hideout (A rogue, bandit, or vampire lair location) **[Location]**
+_hintdung_     -> Hint Dungeon (A location where you find clues to the main objective) **[Location]**
+_house_        -> House (A standard regional residential building destination) **[Location]**
+_house2_       -> Second House (Alternative residential target building) **[Location]**
+_itemdung_     -> Item Dungeon (The specific dungeon containing the target quest item) **[Location]**
+_keydung_      -> Key Dungeon (The dungeon location where a required key is hidden) **[Location]**
+_kidnapper_    -> Kidnapper (The hostile antagonist NPC who took a hostage) **[NPC] [Combat]**
+_knight_       -> Knight (A warrior NPC contact representing a knightly order) **[NPC]**
+_local_        -> A broad variable for a localized town target or neighborhood point **[Location]**
+_lostdung_     -> Lost Dungeon (A remote or hidden dungeon location resource) **[Location]**
+_lover_        -> Lover (A romantic partner NPC target, rescue objective, or contact) **[NPC]**
+_maker_        -> Maker (The crafter or creator NPC of a specific quest item) **[NPC]**
+_mansion_      -> Mansion (A noble or wealthy citizen's large residential building) **[Location]**
+_mapdung_      -> Map Dungeon (The dungeon layout containing a crucial quest map) **[Location]**
+_mfriend_      -> Mutual Friend (An intermediate companion or contact NPC) **[NPC]**
+_mg_           -> Mages Guild (Shorthand variable mapping for Mages Guild resources) **[Faction]**
+_mguild_       -> Mages Guild (Specific Mages Guild building or guild hall target) **[Location]**
+_mondun_       -> Monster Dungeon shorthand reference variable **[Location]**
+_mondung_      -> Monster Dungeon (Primary dungeon layout populated by beast/monster types) **[Location]**
+_mondung2_     -> Second Monster Dungeon layout location resource **[Location]**
+_myndung_      -> Minor Dungeon or custom layout location variant hook **[Location]**
+_newdung_      -> New Dungeon (A newly revealed or dynamic quest dungeon target) **[Location]**
+_npc1_         -> First Generic Non-Player Character participant in the script **[NPC]**
+_npc2_         -> Second Generic Non-Player Character participant in the script **[NPC]**
+_oblivion_     -> Oblivion (A Daedric realm hook or external planar portal location) **[Location]**
+_orsinium_     -> Orsinium (An Orcish stronghold or specific Orc-centric quest location) **[Location] [Faction]**
+_other_        -> Context-sensitive miscellaneous resource hook or objective modifier **[Trigger]**
+_pawn_         -> Pawnshop (A local pawnbroker merchant or retail establishment shop) **[Location]**
+_pickuplocal_  -> Local Pickup (The nearby town structure where you pick up a package) **[Location]**
+_pickupregion_ -> Regional Pickup (A distant location in the province to retrieve an item) **[Location]**
+_priest_       -> Priest (A temple holy worker NPC contact or quest target) **[NPC]**
+_qgfriend_     -> Quest Giver's Friend (An ally NPC associated with the client) **[NPC]**
+_qgiver_       -> Quest Giver shorthand mapping descriptor variable **[NPC]**
+_questg_       -> Quest Giver alternative variable slice shorthand **[NPC]**
+_questgiver_   -> Quest Giver (Main script anchor link to the target contract employer) **[NPC]**
+_rebelhouse_   -> Rebel House (The residential safehouse of a rogue faction or rebel NPC) **[Location]**
+_ringdung_     -> Ring Dungeon (The dungeon location where a magical ring item is hidden) **[Location]**
+_ruler_        -> Ruler (The regional noble, king, queen, or baron leading the province) **[NPC] [Faction]**
+_sage_         -> Sage (A wise scholar, lore-master, or informant NPC contact) **[NPC]**
+_scholar_      -> Scholar (An educated researcher, academic, or library NPC target) **[NPC]**
+_scholardung_  -> Scholar Dungeon (The dungeon where a kidnapped scholar is being held) **[Location]**
+
+_shedungent_      -> Shedu Dungeon (A specific high-level or custom quest dungeon layout) **[Location]**
+_sleepingmage_    -> Sleeping Mage (A specific unconscious or trapped wizard NPC target) **[NPC]**
+_snitch_          -> Snitch (An informant or spy NPC contact who holds key quest data) **[NPC]**
+_spouse_          -> Spouse (The player's or an NPC's husband/wife rescue target or contact) **[NPC]**
+_staffdung_       -> Staff Dungeon (The specific dungeon where a magical staff item is hidden) **[Location]**
+_stronghold_      -> Stronghold (An Orcish fort, military outpost, or bandit base location) **[Location]**
+_thiefhouse_      -> Thief House (The residential building or safehouse of a thieves' guild member) **[Location]**
+_ukcrypt_         -> Unknown Crypt (A specific hidden or newly discovered tomb layout) **[Location]**
+_vamp_            -> Vampire (A specific hostile vampire enemy or quest contact NPC) **[NPC] [Combat]**
+_vamp1_           -> First Vampire target (Used in multi-target hunt quests) **[NPC] [Combat]**
+_vamp2_           -> Second Vampire target (Used in multi-target hunt quests) **[NPC] [Combat]**
+_vampire_         -> Vampire (Alternative explicit enemy or faction interaction hook) **[NPC] [Combat]**
+_villager_        -> Villager (A generic town resident NPC contact or informant) **[NPC]**
+_wereBrother_     -> Werewolf Brother (A lycanthrope faction member or cursed NPC relative) **[NPC]**
+_witch_           -> Witch (A witch coven member NPC contact used for Daedric invocations) **[NPC]**
+_witness_         -> Witness (An NPC contact who saw a crime and provides clues) **[NPC]**
+_woodsman_        -> Woodsman (A wilderness hunter, hermit, or lumberjack NPC contact) **[NPC]**
+_wrongdung_       -> Wrong Dungeon (A red-herring dungeon meant to mislead the player) **[Location]**
+_agentplace_      -> Agent Place (The specific location, house, or room where an agent hides) **[Location]**
+_alchemyshop_     -> Alchemy Shop (A local retail store building specializing in potions) **[Location]**
+_arena_           -> Arena (A combat arena or gladiator layout testing hook resource) **[Location]**
+_bank_            -> Bank (The regional financial institution building used for gold loans/letters) **[Location]**
+_banker_          -> Banker (The specific service NPC merchant managing bank transactions) **[NPC]**
+_betrothedhome_   -> Betrothed Home (The residential house of an NPC's fiancé or fiancée) **[Location]**
+_castfort_        -> Castle Fort (Alternative variable mapping for a heavily fortified stronghold) **[Location]**
+_castle_          -> Castle (The primary royal palace or seat of regional political power) **[Location]**
+_chemist_         -> Chemist (Alternative shop or merchant label mapping for an alchemist) **[NPC]**
+_childhouse_      -> Residence location of a child NPC target, victim, or contact **[Location]**
+_childlocale_     -> Child Locale (The general neighborhood or town square where a child is located) **[Location]**
+_competitor_      -> Competitor (A business rival, opposing mercenary, or enemy merchant NPC) **[NPC]**
+_conhouse_        -> Con House (The hideout or residence of a con artist or scammer NPC) **[Location]**
+_contact_         -> Target Contact (Primary intermediate link NPC variable) **[NPC]**
+_contact1_        -> First Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_contact2_        -> Second Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_darkb_           -> Dark Brotherhood (Shorthand faction variable resource hook) **[Faction]**
+_daughterhouse_   -> Daughter's House (The residential home layout of an NPC's daughter) **[Location]**
+_db_              -> Dark Brotherhood shorthand variance reference symbol **[Faction]**
+_dbguild_         -> Dark Brotherhood Guild (The specific hidden sanctuary building target) **[Location]**
+_depository_      -> Depository (A secure storage vault, bank asset room, or item stash location) **[Location]**
+_destination_     -> Destination (The final target town or building required by the script layout) **[Location]**
+_dirtypit_        -> Dirty Pit (A low-tier dungeon, sewer, or specific layout map placeholder) **[Location]**
+_dummy_           -> Dummy (A placeholder layout wrapper used for minor script logic checks) **[Trigger]**
+_dungeon_         -> Target dungeon, crypt, or cave system where quest activities happen **[Location]**
+_giver_           -> Shorthand identifier variable mapping back to the quest client **[NPC]**
+_guard_           -> Guard (A city watchman, dungeon protector, or hostile sentry NPC) **[NPC] [Combat]**
+_hidingplace_     -> Hiding Place (A secret location or house container where a target is stashed) **[Location]**
+_home_            -> Home (The primary baseline residence layout of a target NPC) **[Location]**
+_house_           -> House (Standard residential building destination resource) **[Location]**
+_house1_          -> First House variant identifier (Used when multiple buildings are indexed) **[Location]**
+_house2_          -> Second House variant identifier resource **[Location]**
+_house3_          -> Third House variant identifier resource **[Location]**
+
+_informant1_      -> First Informant (The primary spy or witness NPC providing clues) **[NPC]**
+_inn_             -> Inn (A local tavern or lodging house destination location) **[Location]**
+_itemdung_        -> Item Dungeon (The dungeon layout containing the target quest item) **[Location]**
+_itemplace_       -> Item Place (The specific room, container, or building where an item spawns) **[Location]**
+_kidnapper_       -> Kidnapper (The hostile antagonist NPC who took a hostage) **[NPC] [Combat]**
+_knight_          -> Knight (A warrior NPC representing a regional knightly order) **[NPC]**
+_local_           -> A localized town layout or residential neighborhood point **[Location]**
+_location_        -> Location (A generic designated travel destination hook) **[Location]**
+_lovehouse_       -> Love House (The residential home of an NPC's secret lover) **[Location]**
+_lover_           -> Lover (A romantic partner NPC target or rescue objective) **[NPC]**
+_mageguild_       -> Mages Guild (A standard local Mages Guild hall building resource) **[Location]**
+_magesguild_      -> Mages Guild (Alternative structural mapping for a wizard sanctuary) **[Location]**
+_mansion_         -> Mansion (A wealthy noble's large residential building destination) **[Location]**
+_meetingplace_    -> Meeting Place (A specific tavern, shop, or street corner for a handoff) **[Location]**
+_merchanthome_    -> Merchant Home (The residential house of a shopkeeper or trader NPC) **[Location]**
+_mg_              -> Mages Guild shorthand tracking variable **[Faction]**
+_missingperson_   -> Missing Person (The victim NPC who has disappeared or been kidnapped) **[NPC]**
+_mondung_         -> Monster Dungeon (A dungeon resource populated by monster-type enemies) **[Location]**
+_newplace_        -> New Place (A dynamically chosen target building or town location) **[Location]**
+_noblehome_       -> Noble Home (The residential house of an aristocrat or noble NPC) **[Location]**
+_noblehouse_      -> Noble House (Alternative mapping for an upper-class mansion structure) **[Location]**
+_npc1_            -> First Generic Non-Player Character script participant **[NPC]**
+_npc2_            -> Second Generic Non-Player Character script participant **[NPC]**
+_oblivion_        -> Oblivion (A Daedric realm hook or planar portal destination) **[Location]**
+_oracletemple_    -> Oracle Temple (A specific temple structure housing an oracle or seer NPC) **[Location]**
+_palace_          -> Palace (The central castle or seat of power for the region's ruler) **[Location]**
+_pawn_            -> Pawnshop (A local pawnbroker retail store location) **[Location]**
+_priest_          -> Priest (A temple holy worker NPC contact or quest target) **[NPC]**
+_priesthome_      -> Priest Home (The residential house of a local cleric or priest NPC) **[Location]**
+_prophouse_       -> Prop House (A designated developer or prop testing location resource) **[Location]**
+_qgfriend_        -> Quest Giver's Friend (An ally NPC associated with the main client) **[NPC]**
+_qgiver_          -> Quest Giver shorthand mapping tracking variable **[NPC]**
+_questgiver_      -> Quest Giver (Main script anchor linked to the hiring employer) **[NPC]**
+_rebelhouse_      -> Rebel House (The safehouse building of an underground or rogue faction) **[Location]**
+_safehouse_       -> Safehouse (A secure retreat or drop-off building container) **[Location]**
+_sage_            -> Sage (A wise scholar or loremaster NPC informant contact) **[NPC]**
+_scholar_         -> Scholar (An academic or library NPC target providing research data) **[NPC]**
+_school_          -> School (A local learning institution or specific temple wing layout) **[Location]**
+_shop_            -> Shop (A generic commercial retail store structure destination) **[Location]**
+_sistershouse_    -> Sister's House (The residential home layout of an NPC's sister) **[Location]**
+_snitch_          -> Snitch (An informant or spy NPC holding crucial plot data) **[NPC]**
+_store_           -> Store (A generic local merchant building resource) **[Location]**
+_storehouse_      -> Storehouse (A warehouse, secure storage unit, or supply building) **[Location]**
+_target_          -> Target (The primary goal, enemy boss, or item of the entire quest) **[NPC] [Item]**
+_targethouse_     -> Target House (The specific building where your goal or enemy resides) **[Location]**
+_tavern_          -> Tavern (A local public house or drinking establishment location) **[Location]**
+_temple_          -> Temple (A regional religious building or holy coven site) **[Location]**
+_TestBuilding_    -> Test Building (A layout debugging or logic testing anchor) **[Location]**
+_thiefhome_       -> Thief Home (The residence of a specific thieves' guild rogue NPC) **[Location]**
+_thiefhouse_      -> Thief House (Alternative residential tracking for a thief hideout) **[Location]**
+_thiefplace_      -> Thief Place (The specific spot or room where a thief contact waits) **[Location]**
+_thievesguild_    -> Thieves Guild (The local sanctuary building or tavern front for rogues) **[Location]**
+
+_townhouse_       -> Townhouse (A standard multi-story urban residential building) **[Location]**
+_transporter_     -> Transporter (A mages' guild teleporter NPC or portal travel mechanism) **[NPC]**
+
+_vamp_               -> Vampire (Hostile vampire enemy or faction interaction contact NPC) **[NPC] [Combat]**
+_vamp2_              -> Second Vampire enemy target (Used in multi-stage hunting scripts) **[NPC] [Combat]**
+_vamphouse_          -> Vampire House (A regular residential building taken over by vampires) **[Location]**
+_vampire_            -> Vampire (Explicit enemy entity resource layout hook) **[NPC] [Combat]**
+_witch_              -> Witch (A coven member NPC contact used for Daedric invocations) **[NPC]**
+_withouse_           -> Wit House / Witness House (The specific building where a witness is hidden) **[Location]**
+_witness_            -> Witness (An NPC contact who saw a crime occur and provides clues) **[NPC]**
+_woodsman_           -> Woodsman (A wilderness ranger, hunter, or hermit NPC contact) **[NPC]**
+_0x3c_               -> Hexadecimal placeholder identifier used for raw asset mapping or debugging **[Trigger]**
+_1stparton_          -> First Part On (A custom layout stage trigger script marker) **[Trigger]**
+_2dagger_            -> Second Dagger (A secondary or alternative quest dagger item artifact) **[Item]**
+_2dung_              -> Second Dungeon (A secondary quest destination cave/crypt resource) **[Location]**
+_2letter_            -> Second Letter (A secondary narrative document or delivery package item) **[Item]**
+_2mondung_           -> Second Monster Dungeon (A secondary dungeon layout populated by monsters) **[Location]**
+_2myndung_           -> Second Minor Dungeon (An alternative minor layout destination hook) **[Location]**
+_2ndgo_              -> Second Go (A multi-stage quest progression logic tracker) **[Trigger]**
+_2ndparton_          -> Second Part On (A secondary phase quest layout stage marker) **[Trigger]**
+_2palace_            -> Second Palace (An alternative royal castle or seat of power target building) **[Location]**
+_2ransom_            -> Second Ransom (A backup ransom payment gold pile or item objective) **[Item]**
+_2shedungent_        -> Second Shedu Dungeon (An alternative high-tier quest dungeon layout) **[Location]**
+_2storehouse_        -> Second Storehouse (A secondary warehouse or supply building resource) **[Location]**
+_a1_                 -> Generic array asset index 1 (Used for multi-option script conditions) **[Trigger]**
+_a2_                 -> Generic array asset index 2 **[Trigger]**
+_a3_                 -> Generic array asset index 3 **[Trigger]**
+_a4_                 -> Generic array asset index 4 **[Trigger]**
+_a5_                 -> Generic array asset index 5 **[Trigger]**
+_a6_                 -> Generic array asset index 6 **[Trigger]**
+_accompany_          -> Accompany (An escort target NPC who physically follows the player) **[NPC]**
+_acolyte_            -> Acolyte (A low-ranking temple worker or novice cleric NPC contact) **[NPC]**
+_acrobat_            -> Acrobat (A specific thief-class or entertainer NPC contact type) **[NPC]**
+_activatechoice_     -> Activate Choice (A dynamic script branching option or prompt decision trigger) **[Trigger]**
+_advancequest_       -> Advance Quest (A structural code marker used to push script steps forward) **[Trigger]**
+_agent_              -> Agent (An undercover faction contact or rogue operative NPC) **[NPC]**
+_agentplace_         -> Agent Place (The building, house, or room where an operative is hiding) **[Location]**
+_agentuk_            -> Unknown Agent (A mysterious or unnamed faction operative NPC target) **[NPC]**
+_aide_               -> Aide (An assistant, noble servant, or secretary NPC contact) **[NPC]**
+_akatosh_            -> Akatosh (Lower-case data hook referencing the Dragon God temple faction) **[Faction]**
+_Akatosh_            -> Akatosh (The specific regional Temple of Akatosh building layout resource) **[Location]**
+_akorithi_           -> Akorithi (Lower-case variable reference to Queen Akorithi of Sentinel) **[NPC]**
+_Akorithi_           -> Queen Akorithi (The major royal NPC character asset from the main questline) **[NPC] [Faction]**
+_akorithiletter_     -> Akorithi's Letter (A critical royal document item from the Queen of Sentinel) **[Item]**
+_akorithirevenge_    -> Akorithi's Revenge (A specific combat encounter or narrative event trigger) **[Trigger] [Combat]**
+_alchemist_          -> Alchemist (An alchemical store merchant or potion maker NPC target) **[NPC]**
+_alchemyshop_        -> Alchemy Shop (A commercial retail store building layout specializing in potions) **[Location]**
+_almightyletter_     -> Almighty Letter (A high-priority dynamic narrative document or scroll item) **[Item]**
+_altsafe_            -> Alternative Safehouse (An alternate hideout or item drop-off building container) **[Location]**
+_amulet_             -> Amulet (A wearable magical neckpiece quest item objective) **[Item]**
+_ancientlich_        -> Ancient Lich (A high-tier, powerful undead enemy boss resource target) **[NPC] [Combat]**
+_annoyingwitness_    -> Annoying Witness (A specific troublesome informant NPC who must be dealt with) **[NPC]**
+_answer_             -> Answer (A structural dialogue script hook checking user input responses) **[Trigger]**
+_antimerchantletter_ -> Anti-Merchant Letter (A scandalous document item detailing schemes against traders) **[Item]**
+_antimerchantlog_    -> Anti-Merchant Log (A journal or diary tracking plots against local merchants) **[Item]**
+
+_antinobleletter_   -> Anti-Noble Letter (An incriminating letter or plot document against a noble) **[Item]**
+_antinoblelog_      -> Anti-Noble Log (A diary or logbook containing plans against an aristocrat) **[Item]**
+_antipriestletter_  -> Anti-Priest Letter (A heresy or blackmail document targeting a temple cleric) **[Item]**
+_antipriestlog_     -> Anti-Priest Log (A ledger tracking actions or conspiracies against the priesthood) **[Item]**
+_antithiefletter_   -> Anti-Thief Letter (A document detailing plans or safehouse tips to catch rogues) **[Item]**
+_antithieflog_      -> Anti-Thief Log (A tracker or watch report focused on local thieves' guild operations) **[Item]**
+_apo_               -> Apothecary (Shorthand layout mapping for a potion store or merchant) **[Location]**
+_apothecary_        -> Apothecary (The specific potion merchant or shop structure) **[Location]**
+_archer_            -> Archer (A marksman enemy variant or ranged combatant NPC target) **[NPC] [Combat]**
+_arena_             -> Arena (A combat arena or gladiator layout testing hook resource) **[Location]**
+_arkay_             -> Arkay (Data hook referencing the Temple faction of Arkay, God of Burials) **[Faction]**
+_arrival_           -> Arrival (A travel location marker, trigger zone, or dynamic timer event) **[Trigger]**
+_artifact_          -> Artifact (A powerful, rare, or unique quest item objective) **[Item]**
+_artifact1_         -> First Artifact (Used in multi-item recovery quest variations) **[Item]**
+_artifact2_         -> Second Artifact item tracking hook **[Item]**
+_artifact3_         -> Third Artifact item tracking hook **[Item]**
+_artifact4_         -> Fourth Artifact item tracking hook **[Item]**
+_assassin_          -> Assassin (A hostile Dark Brotherhood or rogue killer NPC target) **[NPC] [Combat]**
+_atAnyHome_         -> At Any Home (A condition choosing any random town residence building) **[Location]**
+_atronach_          -> Atronach (An elemental golem enemy target, like fire, iron, or ice) **[NPC] [Combat]**
+_attackPlayer_      -> Attack Player (An event script command that triggers an ambush or hostile spawn) **[Trigger] [Combat]**
+_aubki_             -> Princess Aubk-i (The major royal NPC character asset, Queen of Daggerfall) **[NPC] [Faction]**
+_aurielsbow_        -> Auriel's Bow (The specific legendary Daedric artifact weapon item) **[Item]**
+_aurielshield_      -> Auriel's Shield (The specific legendary Daedric artifact shield item) **[Item]**
+_badend_            -> Bad End (A script state trigger indicating quest failure or a negative choice) **[Trigger]**
+_badpcn_            -> Bad Player Name (A placeholder or backup name variable if verification fails) **[Trigger]**
+_ball_              -> Ball (An item asset resource or specific noble party event container) **[Item]**
+_bank_              -> Bank (The regional financial institution building layout) **[Location]**
+_banker_            -> Banker (The specific service NPC merchant managing bank transactions) **[NPC]**
+_barbarians_        -> Barbarians (A faction grouping or hostile warrior NPC enemy wave) **[NPC] [Faction] [Combat]**
+_bard_              -> Bard (A musician or rogue-class storyteller NPC contact) **[NPC]**
+_barmaid_           -> Barmaid (A specific tavern worker NPC contact) **[NPC]**
+_bats_              -> Giant Bats (Low-level winged beast enemies used for dungeon population) **[NPC] [Combat]**
+_battlemage_        -> Battlemage (A powerful spell-casting heavy armored enemy variant or contact) **[NPC] [Combat]**
+_batty_             -> Batty (Internal developer layout label, nickname, or quest creature tag) **[Trigger]**
+_bear_              -> Grizzly Bear (A wildlife beast dungeon enemy resource target) **[NPC] [Combat]**
+_Benevolence_of_    -> Benevolence of (Part of a temple faction title, like the Benevolence of Mara) **[Faction]**
+_betrayguardian_    -> Betray Guardian (A branching decision choice to turn against a protector NPC) **[Trigger]**
+_betrayQuestor_     -> Betray Questor (A branching choice to screw over the original quest giver) **[Trigger]**
+_betrothed_         -> Betrothed (The fiancé or fiancée NPC target required for rescue/escort) **[NPC]**
+_betrothedhome_     -> Betrothed Home (The residential house of an NPC's betrothed) **[Location]**
+_blood_             -> Blood (An item artifact, like a vial of blood, or a vampire quest hook) **[Item]**
+_bloodfather_       -> Bloodfather (A vampire clan patriarch boss enemy or faction lead) **[NPC] [Faction] [Combat]**
+_Bloodysword_       -> Bloody Sword (A custom or specific cursed combat weapon quest item) **[Item]**
+_bodyguard_         -> Bodyguard (A defensive sentinel NPC protecting a target contact or enemy) **[NPC]**
+_bonk_              -> Bonk (A developer script action command tag, sound cue, or knockdown modifier) **[Trigger]**
+_book_              -> Book (A readable quest text scroll, lore item, or delivery package) **[Item]**
+_bookstore_         -> Bookstore (A local book dealer or scroll shop location target) **[Location]**
+_boss_              -> Boss (The primary high-health enemy leader of a dungeon or ambush) **[NPC] [Combat]**
+_bothdorjii_        -> Both Dorjii (Specific character asset reference or quest narrative variable) **[NPC]**
+_bow_               -> Bow (A standard archery weapon item or required quest gear piece) **[Item]**
+_bowdung_           -> Bow Dungeon (A localized target dungeon layout variant) **[Location]**
+
+
+_bribe_              -> Bribe (An amount of gold or an item used to pay off an NPC contact) **[Item] [Trigger]**
+_bribe2_             -> Second Bribe (Alternative or secondary payout condition) **[Item] [Trigger]**
+_bribe3_             -> Third Bribe payout condition variable **[Item] [Trigger]**
+_bribe4_             -> Fourth Bribe payout condition variable **[Item] [Trigger]**
+_brisennafirstletter_-> Lady Brisienna's First Letter (A critical main quest entry document artifact) **[Item]**
+_brisennasecondletter_-> Lady Brisienna's Second Letter (The main quest follow-up prompt letter item) **[Item]**
+_brisno_             -> Lady Brisienna 'No' (Script branch condition if you refuse her meeting) **[Trigger]**
+_brisyes_            -> Lady Brisienna 'Yes' (Script branch condition if you accept her meeting) **[Trigger]**
+_brother_            -> Brother (A specific sibling NPC target, hostage, or contact) **[NPC]**
+_burglar_            -> Burglar (A hostile rogue thief NPC enemy variant or contact) **[NPC] [Combat]**
+_casfort_            -> Castle Fort (A heavily guarded castle or regional fortification) **[Location]**
+_castfort_           -> Castle Fort alternative variable mapping layout reference **[Location]**
+_castle_             -> Castle (The central royal palace or political seat of power in a kingdom) **[Location]**
+_challenge_          -> Challenge (A script event trigger for a duel or immediate combat scenario) **[Trigger] [Combat]**
+_chemist_            -> Chemist (An alternative variable label mapping for an alchemist or potion seller) **[NPC]**
+_child_              -> Child (A young adolescent NPC target requiring rescue or escorting) **[NPC]**
+_childhouse_         -> Child's House (The residential home layout where a child target resides) **[Location]**
+_childlocale_        -> Child Locale (The general urban neighborhood or town square where a child spawns) **[Location]**
+_click_              -> Click Interaction (An active UI mouse selection or prompt trigger action) **[Trigger]**
+_clanfeather1_       -> Clan Feather 1 (A custom or specific vampire coven/harpy quest item artifact) **[Item]**
+_clearclick_         -> Clear Click (A script command resetting mouse selection logic branches) **[Trigger]**
+_clearclick2_        -> Clear Click 2 (Secondary layout script selection clearing command) **[Trigger]**
+_clearnulfaga_       -> Clear Nulfaga (A script state tracking your interaction status with Nulfaga) **[Trigger]**
+_cleric_             -> Cleric (A generic temple holy worker or spell-casting NPC contact) **[NPC]**
+_clickanyone_        -> Click Anyone (A dialogue interaction hook that runs when talking to any NPC) **[Trigger]**
+_clickchild_         -> Click Child (Dialogue trigger specifically for clicking a child NPC) **[Trigger]**
+_clickedBoth_        -> Clicked Both (Logic gate tracking if you spoke to two separate required targets) **[Trigger]**
+_clickedElysana_     -> Clicked Elysana (Logic branch checking if you spoke to Princess Elysana of Wayrest) **[Trigger]**
+_clickedKing_        -> Clicked King (Logic branch checking if you spoke to a regional sovereign king) **[Trigger]**
+_clickedQueen_       -> Clicked Queen (Logic branch checking if you spoke to a regional sovereign queen) **[Trigger]**
+_clickmerchant_      -> Click Merchant (Dialogue trigger specifically for clicking a shopkeeper NPC) **[Trigger]**
+_clicknoble_         -> Click Noble (Dialogue trigger specifically for clicking an aristocrat NPC) **[Trigger]**
+_clicknulfaga_       -> Click Nulfaga (Dialogue trigger checking if you clicked the witch Nulfaga) **[Trigger]**
+_clickoblivion_      -> Click Oblivion (An interaction hook with an Oblivion gate or portal anchor) **[Trigger]**
+_clickonenemy_       -> Click on Enemy (An interaction or combat challenge hook with a hostile unit) **[Trigger] [Combat]**
+_clickonqgiver_      -> Click on Quest Giver (Dialogue trigger verifying interaction with your employer) **[Trigger]**
+_clickonwitness_     -> Click on Witness (Dialogue trigger verifying interaction with an eyewitness) **[Trigger]**
+_clickpriest_        -> Click Priest (Dialogue trigger specifically for clicking a temple priest NPC) **[Trigger]**
+_clickqgiver_        -> Click Quest Giver alternative logic interaction tracking flag **[Trigger]**
+_clickthief_         -> Click Thief (Dialogue trigger specifically for clicking a thieves' guild rogue) **[Trigger]**
+_clicktotem_         -> Click Totem (The major main-quest script hook for touching the Totem of Tiber Septim) **[Trigger]**
+_clothes_            -> Clothes (A standard bundle of non-magical garment items for delivery) **[Item]**
+_clothing_           -> Clothing explicit asset mapping variable reference resource **[Item]**
+_coastal_            -> Coastal (A location search constraint filtering for seaside towns or ports) **[Trigger]**
+_competitor_         -> Competitor (A business rival, opposing mercenary, or enemy merchant NPC) **[NPC]**
+_completesurrender_  -> Complete Surrender (A script event where a boss stops fighting to yield/talk) **[Trigger] [Combat]**
+_conhouse_           -> Con House (The hideout or residence of a con artist or scammer NPC) **[Location]**
+_contact_            -> Target Contact (Primary link intermediate NPC variable reference) **[NPC]**
+_contact1_           -> First Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_contact2_           -> Second Target Contact (Used in multi-stage dialogue quests) **[NPC]**
+_contactdung_        -> Contact Dungeon (The target dungeon location where a contact resides) **[Location]**
+_cousin_             -> Cousin (A relative NPC target, hostage, or quest contact) **[NPC]**
+_crn_                -> Faction Rank shorthand macro checking logic symbol **[Trigger]**
+_crypt_              -> Crypt (A graveyard vault, tomb, or minor undead dungeon structure) **[Location]**
+
+_custodian_              -> Custodian (The caretaker or manager NPC of a specific building) **[NPC]**
+_cyndassa_               -> Cyndassa (The werewolf maid NPC character asset from the main questline) **[NPC]**
+_daedclicked_            -> Daedra Clicked (A script state tracking interaction with a Daedric prince or shrine) **[Trigger]**
+_daedra_                 -> Daedra (A generic Daedric enemy entity resource target) **[NPC] [Combat]**
+_daedra1_                -> First Daedra target (Used in multi-target hunting or wave scripts) **[NPC] [Combat]**
+_daedra2_                -> Second Daedra target layout identifier **[NPC] [Combat]**
+_daedra3_                -> Third Daedra target layout identifier **[NPC] [Combat]**
+_daedra4_                -> Fourth Daedra target layout identifier **[NPC] [Combat]**
+_daedras_                -> Daedras (Alternative variable plural mapping for a Daedric enemy group) **[NPC] [Combat]**
+_daedroth_               -> Daedroth (A powerful reptilian Daedric enemy monster resource) **[NPC] [Combat]**
+_daggerfall_             -> Daggerfall Region (Lower-case data hook referencing the kingdom/factions of Daggerfall) **[Faction]**
+_Daggerfall_             -> Castle Daggerfall (The central royal court palace or main city location resource) **[Location]**
+_damsel_                 -> Damsel (A captured noblewoman or generic female NPC target requiring rescue) **[NPC] [Rescue]**
+_Dark_                   -> Dark Brotherhood (Capitalized variant reference symbol for the assassin group) **[Faction]**
+_darkb_                  -> Dark Brotherhood (Shorthand variable mapping for guild resources) **[Faction]**
+_darkbmember_            -> Dark Brotherhood Member (An assassin NPC target or hostile ambush unit) **[NPC] [Combat]**
+_darkbrother_            -> Dark Brotherhood (Explicit variable hook for the Brotherhood faction layout) **[Faction]**
+_daughter_               -> Daughter (A relative family NPC target, hostage, or escort objective) **[NPC] [Rescue] [Escort]**
+_daughterhouse_          -> Daughter's House (The residential home layout where an NPC's daughter lives) **[Location]**
+_daytime_                -> Daytime Condition (A time-sensitive script check verifying it is currently daylight hours) **[Trigger]**
+_db_                     -> Dark Brotherhood (Shorthand variable reference symbol for scripting shortcuts) **[Faction]**
+_dbgold_                 -> Dark Brotherhood Gold (A specific item stash or gold payment layout asset) **[Item]**
+_dbguild_                -> Dark Brotherhood Guild (The specific hidden assassin sanctuary building container) **[Location]**
+_deadbody_               -> Dead Body (A static corpse object container used for crime scene investigations) **[Item] [Location]**
+_deadbody2_              -> Second Dead Body (Alternative or secondary corpse object container) **[Item] [Location]**
+_decanter_               -> Decanter (A potion vessel or generic unique glass item container artifact) **[Item] [Delivery]**
+_decoy_                  -> Decoy (A fake item asset, trap layout object, or misleading target placeholder) **[Item] [NPC]**
+_deed_                   -> Land Deed (A legal property document item objective often used for blackmail or reward) **[Item] [Delivery]**
+_deed3_                  -> Third Land Deed (A specific or sequential property document variant) **[Item] [Delivery]**
+_delay_                  -> Delay Timer (A quest countdown clock or script waiting interval variable) **[Trigger]**
+_deliveredtotem_         -> Delivered Totem (A major quest state event tracking the choice of who gets the Totem) **[Trigger]**
+_deliverlettertomerchant_-> Deliver Letter to Merchant (A step-by-step quest path script logic hook) **[Trigger] [Delivery]**
+_deliverlettertonoble_   -> Deliver Letter to Noble (A step-by-step quest path script logic hook) **[Trigger] [Delivery]**
+_deliverlettertopriest_  -> Deliver Letter to Priest (A step-by-step quest path script logic hook) **[Trigger] [Delivery]**
+_deliverlettertothief_   -> Deliver Letter to Thief (A step-by-step quest path script logic hook) **[Trigger] [Delivery]**
+_depository_             -> Depository (A secure storage vault, bank asset room, or item chest stash) **[Location]**
+_destination_            -> Destination (The final target town or structural layout required by the quest script) **[Location]**
+_dibella_                -> House of Dibella (Data hook referencing the Temple faction of the Goddess of Beauty) **[Faction]**
+_direni1_                -> First Direni (A specific NPC contact asset associated with the Direni elf clan) **[NPC]**
+_direni2_                -> Second Direni (A secondary elf faction contact or target asset) **[NPC]**
+_dirennitower_           -> Direnni Tower (The famous high-level island dungeon location layout resource) **[Location]**
+_dirtypit_               -> Dirty Pit (A low-tier dungeon crypt, basement sewer, or layout placeholder) **[Location]**
+_dispatcher_             -> Dispatcher (An intermediate faction coordinator or messenger NPC contact) **[NPC]**
+_document_               -> Document (A scroll, manuscript, secret ledger, or message quest item) **[Item] [Delivery]**
+_dropped_                -> Dropped Item (A tracking logic flag verifying a package was dropped at a target zone) **[Trigger]**
+_drugs_                  -> Illegal Drugs (A contraband delivery parcel item, like Skooma or Moon Sugar) **[Item] [Delivery]**
+_dueler_                 -> Dueler (A hostile martial antagonist NPC participating in a 1v1 challenge) **[NPC] [Combat]**
+_duelist_                -> Duelist (Alternative variable title mapping for an honor combatant target) **[NPC] [Combat]**
+_dummy_                  -> Dummy Placeholder (A generic placeholder tracking layout block used for layout checks) **[NPC] [Item]**
+_dummydaedra_            -> Dummy Daedra (A non-combat or decorative script shell variant of a Daedra unit) **[NPC]**
+_dummydarkb_             -> Dummy Dark Brotherhood (A decorative placeholder shell for an assassin unit) **[NPC]**
+_dummymage_              -> Dummy Mage (A decorative placeholder shell or stationary wizard script unit) **[NPC]**
+_dummyorc_               -> Dummy Orc (A decorative placeholder shell or stationary Orc script unit) **[NPC]**
+_dummypriest_            -> Dummy Priest (A decorative placeholder shell or stationary temple worker script unit) **[NPC]**
+
+_dummytalk_               -> Dummy Talk (A placeholder layout conversation branch or dialogue prompt check) **[Trigger]**
+_dummythief_              -> Dummy Thief (A stationary placeholder shell or inactive thief script unit) **[NPC]**
+_dummyvamp_               -> Dummy Vampire (A stationary placeholder shell or inactive vampire script unit) **[NPC]**
+_dungeon_                 -> Target Dungeon (The primary quest dungeon, cave system, or crypt resource) **[Location]**
+_dungeon1_                -> First Target Dungeon (Used in multi-dungeon or multi-stage quest routing) **[Location]**
+_dungeon2_                -> Second Target Dungeon layout location reference **[Location]**
+_dungeon3_                -> Third Target Dungeon layout location reference **[Location]**
+_eadwyre_                 -> King Eadwyre (The major royal NPC character asset, King of Wayrest) **[NPC] [Faction]**
+_eadwyreletter_           -> Eadwyre's Letter (A critical royal document item from the King of Wayrest) **[Item] [Delivery]**
+_eadwyrerevenge_          -> Eadwyre's Revenge (A specific ambush or retaliatory combat event trigger) **[Trigger] [Combat]**
+_elder_                   -> Elder (A respected community leader, clan elder, or senior temple NPC contact) **[NPC]**
+_elysana_                 -> Princess Elysana (The scheming royal NPC character asset from Wayrest) **[NPC] [Faction]**
+_end_                     -> Quest End (A script state tracking successful wrap-up parameters and reward hand-ins) **[Trigger]**
+_endbuilding_             -> End Building (The final structure, house, or palace destination line to finish the quest) **[Location]**
+_enemy_                   -> Main Enemy (The primary hostile boss monster or antagonist target) **[NPC] [Combat]**
+_entersAnyHome_           -> Enters Any Home (A spatial script trigger checking if the player steps inside any house) **[Trigger]**
+_entersAnywhere_          -> Enters Anywhere (A broad trigger checking if the player moves indoors anywhere) **[Trigger]**
+_escape_                  -> Prisoner Escape (A quest event tracking if a hostage or prisoner breaks out) **[Trigger] [Rescue]**
+_escapetime_              -> Escape Timer (The countdown clock tracking how long a target has to run away) **[Trigger]**
+_escortComplete_          -> Escort Complete (A logic hook verifying an NPC follower was safely delivered) **[Trigger] [Escort]**
+_evilfocus_               -> Evil Focus (A cursed magical item, talisman, or unholy quest relic artifact) **[Item]**
+_evilitem_                -> Evil Item (A generic dangerous or stolen artifact used for criminal plots) **[Item] [Delivery]**
+_executiondelay_          -> Execution Delay (A timer ticking down until a prisoner target is executed by a faction) **[Trigger]**
+_exitsAnywhere_           -> Exits Anywhere (A trigger checking if the player exits an interior map to go outside) **[Trigger]**
+_exitstarter_             -> Exit Starter (A script zone tracking the player leaving a starting area to activate timers) **[Trigger]**
+_exorcise_                -> Exorcise (An event trigger tracking a cleansing ritual on a spirit or item) **[Trigger]**
+_extratime_               -> Extra Time (An extension modifier adding dynamic hours or days to a quest deadline) **[Trigger]**
+_failure_                 -> Quest Failure (The logic block that strips active quest trackers and triggers penalties) **[Trigger]**
+_fakedung_                -> Fake Dungeon (A misleading red-herring dungeon meant to confuse or ambush the player) **[Location]**
+_fakekow_                 -> Fake Knight (An impostor Knightly Order warrior or traitor NPC contact) **[NPC] [Combat]**
+_fakename_                -> Fake Name (An assumed alias used by a hiding criminal or undercover agent NPC) **[NPC]**
+_fakeplace_               -> Fake Place (A deceptive map location hook used in blackmail or riddle paths) **[Location]**
+_falseAide0_              -> False Aide 0 (A corrupt helper or traitorous servant NPC who feeds bad information) **[NPC]**
+_falseletter1_            -> First Fake Letter (A forged document or trap item meant to mislead the player) **[Item] [Delivery]**
+_falseletter2_            -> Second Fake Letter document variant asset **[Item] [Delivery]**
+_falseletter3_            -> Third Fake Letter document variant asset **[Item] [Delivery]**
+_falseletter4_            -> Fourth Fake Letter document variant asset **[Item] [Delivery]**
+_father_                  -> Father (A specific parental NPC target, hostage, or key rescue objective) **[NPC] [Rescue]**
+_fatherdung_              -> Father Dungeon (The specific dungeon layout where a target's father is trapped) **[Location]**
+_feedback_                -> Script Feedback (An internal developer debugging print log or status tracker check) **[Trigger]**
+_fighter_                 -> Fighter (A generic mercenary, brawler, or hostile physical warrior NPC combatant) **[NPC] [Combat]**
+_Fighters_                -> Fighters Guild (Lower-case reference check tracking regional Fighters Guild systems) **[Faction]**
+_fightersguild_           -> Fighters Guild Hall (The physical guild structure layout used for job hand-ins) **[Location]**
+_finddaughter_            -> Find Daughter (The objective state tracing discovery of a missing girl) **[Trigger] [Rescue]**
+_findtraitor_             -> Find Traitor (The objective state tracking discovery of an undercover deserter) **[Trigger] [Combat]**
+_finger_                  -> Severed Finger (A gruesome body part item used as a threat, clue, or curse focus) **[Item]**
+_fire_                    -> Fire (A decorative lighting layout element or dynamic event damage trigger) **[Trigger]**
+_firedaedra_              -> Fire Daedra (An elemental, flame-casting Daedric combat enemy resource) **[NPC] [Combat]**
+_firstclickchild_         -> First Click Child (Dialogue trigger managing the initial conversation with a young NPC) **[Trigger]**
+_firsttimer_              -> First Timer (A primary phase trigger tracking entry into a quest stage checklist) **[Trigger]**
+_firstwitnessdiscussion_  -> First Witness Discussion (The script interaction hook analyzing an eyewitness's clues) **[Trigger]**
+_flesh_                   -> Flesh (A raw organ chunk, zombie item asset, or alchemical coven component) **[Item]**
+_flowers_                 -> Flowers (A decorative botanical delivery parcel or temple offering item) **[Item] [Delivery]**
+_foil_                    -> Foil (A lightweight fencing sword item or an antagonist NPC meant to thwart a plan) **[Item] [NPC]**
+
+_foilGone_               -> Foil Gone (Logic trigger checking if a rival antagonist NPC has successfully left the area) **[Trigger]**
+_foundme_                -> Found Me (A script hook verifying the player successfully located a hiding or target NPC) **[Trigger]**
+_friend1_                -> First Ally (An allied contact or intermediate companion NPC) **[NPC]**
+_friend2_                -> Second Ally contact variable asset **[NPC]**
+_friend3_                -> Third Ally contact variable asset **[NPC]**
+_friend4_                -> Fourth Ally contact variable asset **[NPC]**
+_friendofnecros_         -> Friend of Necromancers (An undercover ally or agent of the Necromancer faction) **[NPC] [Faction]**
+_friendofthievesguild_   -> Friend of Thieves Guild (A friendly rogue contact or fence NPC asset) **[NPC] [Faction]**
+_friendofunderking_      -> Friend of the Underking (A covert agent aligned with the mysterious Underking) **[NPC] [Faction]**
+_frost_                  -> Frost (An environmental ice layout element or dynamic frost damage script trigger) **[Trigger]**
+_frostdaedra_            -> Frost Daedra (A powerful, ice-casting Daedric combat enemy resource) **[NPC] [Combat]**
+_gaffer_                 -> Gaffer (An elderly village resident, old man, or generic informant NPC) **[NPC]**
+_gem_                    -> Precious Gem (A valuable jewelry item objective like a ruby or sapphire) **[Item] [Delivery]**
+_gem1_                   -> First Gem target (Used in multi-stage loot or collection quests) **[Item] [Delivery]**
+_gem3_                   -> Third Gem variant asset resource **[Item] [Delivery]**
+_gem4_                   -> Fourth Gem variant asset resource **[Item] [Delivery]**
+_gems_                   -> Gems (Alternative asset cluster mapping for a pouch of precious jewels) **[Item] [Delivery]**
+_getSword_               -> Get Sword (An objective tracker confirming the player looted a specific blade target) **[Trigger]**
+_gettraitor_             -> Get Traitor (An objective tracking step checking if a fugitive was caught or slain) **[Trigger] [Combat]**
+_ghost_                  -> Ghost (A spectral, ethereal undead enemy target immune to iron weapons) **[NPC] [Combat]**
+_giant_                  -> Giant (A high-health, hard-hitting humanoid monster enemy resource) **[NPC] [Combat]**
+_giantFriends_           -> Giant Friends (A multi-spawn group trigger for a wave of giant enemies) **[NPC] [Combat]**
+_giantWaveWhileInDungeon_-> Giant Wave in Dungeon (An ambush event spawning hostile giants inside a cavern) **[Trigger] [Combat]**
+_gimme_                  -> Gimme (A developer script shortcut loop or quick testing item hand-out hook) **[Trigger]**
+_gimmegimme_             -> Gimme Gimme (An alternative rapid debug layout script bypass toggle) **[Trigger]**
+_giveantimerchantletter_-> Give Anti-Merchant Letter (Dialogue prompt option to hand over a target letter) **[Trigger] [Delivery]**
+_giveantinobleletter_    -> Give Anti-Noble Letter (Dialogue prompt option to hand over an incriminating paper) **[Trigger] [Delivery]**
+_giveantipriestletter_   -> Give Anti-Priest Letter (Dialogue prompt option to hand over heresy evidence) **[Trigger] [Delivery]**
+_giveantithiefletter_    -> Give Anti-Thief Letter (Dialogue prompt option to betray a rogue contact) **[Trigger] [Delivery]**
+_giveingredient_         -> Give Ingredient (A script action command transferring an alchemical component item) **[Trigger] [Delivery]**
+_giveLetter_             -> Give Letter (General text choice prompt confirming a letter hand-over to an NPC) **[Trigger] [Delivery]**
+_givenitem_              -> Given Item (Logic state tracking if a quest-critical delivery parcel was accepted) **[Trigger]**
+_giventodaggerfall_      -> Given to Daggerfall (A choice tracking if you surrendered an item to Daggerfall's court) **[Trigger]**
+_giver_                  -> Client (Shorthand script hook linking directly back to the quest employer) **[NPC]**
+_giverelictask_          -> Give Relic Task (A special plot phase command prompting a Daedric or ancient relic hunt) **[Trigger]**
+_givereward_             -> Give Reward (The engine block that adds gold, items, or reputation gains on completion) **[Trigger]**
+_givershouse_            -> Giver's House (The residential home layout where your employer lives) **[Location]**
+_givetogothryd_          -> Given to Gothryd (A choice tracking if you turned a critical main item over to the King) **[Trigger]**
+_givetoken_              -> Give Token (A transaction hook transferring a special script pass or guild key item) **[Trigger]**
+_Glenmoril_              -> Glenmoril Coven (The specific localized witch coven location map marker or faction hook) **[Location] [Faction]**
+_goclock_                -> Go Clock (An internal script clock managing travel countdowns or event scheduling) **[Trigger]**
+_gold_                   -> Gold Pile (A dynamic money stash object adding directly to the player's currency bag) **[Item]**
+_gold1_                  -> First Gold parcel target tracker variable **[Item]**
+_gold2_                  -> Second Gold parcel target tracker variable **[Item]**
+_goldBrick1_             -> First Gold Brick (A heavy treasure item asset representing high-value physical loot) **[Item]**
+_goldBrick2_             -> Second Gold Brick heavy treasure asset variant **[Item]**
+_goldBrick3_             -> Third Gold Brick heavy treasure asset variant **[Item]**
+_goldBrick4_             -> Fourth Gold Brick heavy treasure asset variant **[Item]**
+_goldgoth_               -> Gothryd's Gold (A specific bounty layout or gold bribe associated with the King) **[Item]**
+_goout_                  -> Go Out (An indoor-to-outdoor cell transition switch or NPC leaving trigger) **[Trigger]**
+_gortwog_                -> Gortwog gro-Nagorm (The major character asset, King of the Orcs of Orsinium) **[NPC] [Faction]**
+_gortwogrevenge_         -> Gortwog's Revenge (An aggressive Orc squad ambush event tracking player choices) **[Trigger] [Combat]**
+_gothryd_                -> Gothryd data reference variable string **[NPC]**
+_Gothryd_                -> King Gothryd (The primary royal NPC character asset, ruler of Daggerfall) **[NPC] [Faction]**
+
+_grabdiary_                   -> Grab Diary (Logic trigger checking if the player successfully looted a target journal) **[Trigger]**
+_graveyard_                   -> Graveyard (A regional burial ground exterior location resource) **[Location]**
+_greklith_                    -> Greklith (A specific Orcish warlord or unique quest enemy asset reference) **[NPC] [Combat]**
+_guard_                       -> Guard (A defensive city watchman, hostile sentry, or protector NPC) **[NPC] [Combat]**
+_guard1_                      -> First Guard target (Used in multi-guard spawn or ambush encounters) **[NPC] [Combat]**
+_guard2_                      -> Second Guard target layout identifier **[NPC] [Combat]**
+_guard3_                      -> Third Guard target layout identifier **[NPC] [Combat]**
+_guard4_                      -> Fourth Guard target layout identifier **[NPC] [Combat]**
+_guardian_                    -> Guardian (A designated protector entity guarding a quest objective) **[NPC] [Combat]**
+_guards_                      -> Guards (Plural variable tracking a squad or wave of armored defenders) **[NPC] [Combat]**
+_guildhall_                   -> Guildhall (A broad generic target layout wrapper for faction hubs like fighters or mages guilds) **[Location]**
+_happyakor_                   -> Happy Akorithi (A main quest faction choice variable checking if Queen Akorithi is satisfied) **[Trigger]**
+_happyead_                    -> Happy Eadwyre (A main quest faction choice variable checking if King Eadwyre is satisfied) **[Trigger]**
+_happykow_                    -> Happy King of Worms (Main quest flag tracking if the Necromancer leader got his desired artifact) **[Trigger]**
+_happyunk_                    -> Happy Underking (Main quest flag tracking if the ancient magical Underking faction is satisfied) **[Trigger]**
+_happywog_                    -> Happy Gortwog (Main quest flag tracking if the Orc King's political terms were met) **[Trigger]**
+_harpy_                       -> Harpy (A winged, feather-casting monstrous dungeon enemy target) **[NPC] [Combat]**
+_hasDecanter_                 -> Has Decanter (A conditional inventory check tracking if the target potion vessel is held) **[Trigger]**
+_hasletter_                   -> Has Letter (A conditional inventory gate tracking if the player possesses the quest document) **[Trigger]**
+_hasPoison_                   -> Has Poison (An inventory script condition verifying the player carries a required toxic item) **[Trigger]**
+_HatAndShades_                -> Hat and Shades (A classic funny developer layout debugging code title or easter egg script tag) **[Item]**
+_havereadnecromancerletter_   -> Have Read Necromancer Letter (A text block logic hook checking if the player opened the occult message) **[Trigger]**
+_havereadthievesguildletter_  -> Have Read Thieves Guild Letter (A text block logic hook checking if the rogue courier document was opened) **[Trigger]**
+_havereadunderkingletter_     -> Have Read Underking Letter (A critical main quest script condition tracking letter exposure) **[Trigger]**
+_havereadwitnessletter_       -> Have Read Witness Letter (Dialogue branch tracker confirming clue document reading) **[Trigger]**
+_haverelic_                   -> Have Relic (An inventory state check tracking the possession of a major unique quest artifact) **[Trigger]**
+_healer_                      -> Healer (A temple Restoration merchant or clerical NPC contact) **[NPC]**
+_heart_                       -> Human Heart (A unique ingredient, ritual component, or coven quest item) **[Item]**
+_heist_                       -> Heist Event (A robbery stage script tag controlling building alarms and target guard tracking) **[Trigger]**
+_helseth_                     -> Prince Helseth (The prominent royal political character asset from the Wayrest court) **[NPC] [Faction]**
+_hermit_                      -> Hermit (A reclusive wilderness resident, outcast mage, or isolationist NPC contact) **[NPC]**
+_hideout_                     -> Hideout (A rogue safehouse, vampire den, or bandit camp interior destination) **[Location]**
+_hidingplace_                 -> Hiding Place (The designated secret room or layout container where an NPC or treasure is stashed) **[Location]**
+_hintdung_                    -> Hint Dungeon (A secondary dungeon where layout text pages provide maps to the primary objective) **[Location]**
+_hitguardian_                 -> Hit Guardian (A combat trigger tracking if the player strikes a protected objective unit) **[Trigger] [Combat]**
+_hitseducer_                  -> Hit Seducer (A combat trigger tracking if the player strikes a hostile Daedra Seducer) **[Trigger] [Combat]**
+_hittraitor_                  -> Hit Traitor (A combat trigger tracking if a fugitive or defector NPC takes damage) **[Trigger] [Combat]**
+_holdtotem_                   -> Hold Totem (The major engine script validation checking if the Totem of Tiber Septim is in hand) **[Trigger]**
+_home_                        -> Home (The baseline individual residence layout mapping for a specific target contact) **[Location]**
+_honestmistake_               -> Honest Mistake (A dialogue loop path checking if a bounty or aggressive status was accidental) **[Trigger]**
+_hooker_                      -> Courtesan / Prostitute (A specific lower-class tavern or street NPC contact) **[NPC]**
+_hookerconfess_               -> Courtesan Confession (A narrative plot dialogue branch detailing crime clues or secrets) **[Trigger]**
+_hookerhouse_                 -> Courtesan House (The residential building layout or room targeting that specific contact) **[Location]**
+_Host_of_the_                 -> Host of the (Part of a knightly layout structure name, like the Host of the True Horn) **[Faction]**
+_house_                       -> House (Standard urban residential building target destination resource) **[Location]**
+_House_of_                    -> House of (Prefix tracker used for regional temple coven factions, like House of Dibella) **[Faction]**
+_house1_                      -> First House variant identifier (Used when parsing or tracking several residences) **[Location]**
+_house2_                      -> Second House variant identifier layout resource **[Location]**
+_house3_                      -> Third House variant identifier layout resource **[Location]**
+_how1_                        -> How 1 (An internal procedural question path logic check used for riddle or mapping quests) **[Trigger]**
+_how2_                        -> How 2 (Secondary tracking logic node for puzzle/branching scripts) **[Trigger]**
+_hunter_                      -> Hunter (A professional beast-tracking archer or bounty hunter NPC contact) **[NPC]**
+_huntstart_                   -> Hunt Start (A time tracking event initiating wild tracking or hit-squad sequences) **[Trigger]**
+_ice_                         -> Ice Block (An environmental dungeon obstruction, layout asset, or frost damage trigger) **[Trigger] [Location]**
+
+_illkeepthatgem_     -> Keep Gem Choice (A dialogue branch option where the player decides to steal/keep a quest jewel) **[Trigger]**
+_imp_                -> Imp (A small, spell-casting flying creature enemy resource target) **[NPC] [Combat]**
+_indaggerfall_       -> In Daggerfall Check (A spatial logic gate tracking if the player is currently inside Daggerfall province) **[Trigger]**
+_informant_          -> Informant (A spy, witness, or contact NPC who holds key quest plotting data) **[NPC]**
+_informant1_         -> First Informant (Primary witness contact variable asset in multi-stage investigations) **[NPC]**
+_ingredient_         -> Alchemical Ingredient (A physical potion component item objective, like ghoul dust or giant blood) **[Item] [Delivery]**
+_inj_                -> Injured / Injury (A script condition tracking health damage or a wounded NPC state) **[Trigger] [NPC]**
+_injknight_          -> Injured Knight (A specific wounded warrior NPC contact requiring medical aid or rescue) **[NPC] [Rescue]**
+_injtalk_            -> Injury Dialogue (A special script text interaction path that opens when speaking to a wounded NPC) **[Trigger]**
+_inn_                -> Inn (A local tavern or lodging house target structure destination) **[Location]**
+_inside_             -> Inside Cell Check (A spatial logic trigger verifying the player is currently indoors) **[Trigger]**
+_insidespawn_        -> Inside Spawn Zone (A script directive forcing hostile ambushes to appear indoors near the player) **[Trigger] [Combat]**
+_invalidsurrender_   -> Invalid Surrender (A logic hook checking if a beaten boss refuses to yield or tries to trick the player) **[Trigger] [Combat]**
+_invitepc_           -> Invite Player (A courier prompt trigger delivering an invitation letter to a royal palace or guild meeting) **[Trigger]**
+_inwilderness_       -> In Wilderness Check (A spatial tracking logic gate verifying the player is outside of city limits) **[Trigger]**
+_iron_               -> Iron Ore / Metal Piece (A standard heavy raw material item asset objective) **[Item] [Delivery]**
+_item_               -> Quest Item (The primary baseline physical asset, package, or artifact tied to the script) **[Item] [Delivery]**
+_item0_              -> First sequential quest item variant tracking hook **[Item]**
+_item1_              -> Second sequential quest item variant tracking hook **[Item]**
+_item2_              -> Third sequential quest item variant tracking hook **[Item]**
+_item3_              -> Fourth sequential quest item variant tracking hook **[Item]**
+_itemdung_           -> Item Dungeon (The specific target dungeon layout where a quest item is hidden) **[Location]**
+_itemindung_         -> Item in Dungeon Check (A logic validation tracking if the target item has spawned successfully in a crypt) **[Trigger]**
+_itemplace_          -> Item Placement Spot (The precise coordinate room, chest, or table where an objective spawns) **[Location] [Item]**
+_itemtopriest_       -> Item to Priest Handoff (A specific transaction dialogue logic gate for temple delivery quests) **[Trigger] [Delivery]**
+_itemtoqg_           -> Item to Quest Giver Handoff (The transaction dialogue hook checking your contract delivery status) **[Trigger] [Delivery]**
+_jewelry_            -> Fine Jewelry (A valuable wearable item objective like a dynamic necklace or ring) **[Item] [Delivery]**
+_julianos_           -> School of Julianos (Data hook referencing the Temple faction of the God of Wisdom) **[Faction]**
+_keptgems_           -> Kept Gems Status (A reputation or script path tracker logging that you stole the client's jewels) **[Trigger]**
+_keptmetal_          -> Kept Metal Status (A tracking log recording that you hoarded high-value ore delivery parcels) **[Trigger]**
+_key_                -> Dungeon Key (A physical security key item required to unlock a specific quest door) **[Item]**
+_keydung_            -> Key Dungeon (The specific secondary dungeon location where an objective key is hidden) **[Location]**
+_keytime_            -> Key Quest Timer (A specialized clock tracking how many hours remain to find a mandatory item key) **[Trigger]**
+_kidnapper_          -> Kidnapper (The hostile antagonist NPC who took a hostage or relative) **[NPC] [Combat]**
+_killmon_            -> Kill Monster Target (An objective validation tracking if the main boss creature has been slain) **[Trigger] [Combat]**
+_king_               -> Sovereign King (A generic royal court ruler NPC contact or quest client anchor) **[NPC] [Faction]**
+_kingofworms_        -> King of Worms (Lower-case reference variable string for Mannimarco, leader of the Necromancers) **[NPC] [Faction]**
+_kingoworms_         -> King of Worms alternative logic mapping reference hook **[NPC]**
+_Kingoworms_         -> Mannimarco, The King of Worms (The high-tier royal Necromancer character asset from the main story) **[NPC] [Faction]**
+_knight_             -> Knight (A heavily armored warrior NPC contact representing a military order) **[NPC]**
+_knights_            -> Knights (Plural variable string tracking an elite squad or wave of armored guardians) **[NPC] [Combat]**
+_Knights_of_the_     -> Knights of the (Prefix layout string used to identify regional military factions, like Knights of the Dragon) **[Faction]**
+_kowletter_          -> King of Worms' Letter (A dark occult message document item from Mannimarco) **[Item] [Delivery]**
+_kowrevenge_         -> King of Worms' Revenge (An aggressive undead squad ambush event triggered by crossing the Necromancers) **[Trigger] [Combat]**
+_kynareth_           -> Temple of Kynareth (Data hook referencing the Church faction of the Goddess of Air) **[Faction]**
+_lady_               -> Noble Lady (An aristocratic female NPC contact, client, or rescue target) **[NPC]**
+_latenight_          -> Late Night Condition (A midnight time check script gate verifying city shops are locked) **[Trigger]**
+_lesser_             -> Lesser Entity (A minor variable placeholder modifier used for low-tier rewards or spawns) **[Trigger]**
+_lesserdaedra_       -> Lesser Daedra (A minor Daedric entity enemy target, such as a Scamp) **[NPC] [Combat]**
+_lessgold_           -> Less Gold Penalty (A branching reward deduction layout applied if the player underperformed or failed steps) **[Trigger]**
+_letter_             -> Narrative Letter (A standard readable message, scroll, or blackmailed note item objective) **[Item] [Delivery]**
+_letter1_            -> First sequential letter tracking hook asset **[Item] [Delivery]**
+_letter10_           -> Tenth sequential letter tracking hook asset **[Item] [Delivery]**
+_letter11_           -> Eleventh sequential letter tracking hook asset **[Item] [Delivery]**
+
+_letter15_                 -> Letter 15 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter2_                  -> Second indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter26_                 -> Letter 26 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter27_                 -> Letter 27 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter28_                 -> Letter 28 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter29_                 -> Letter 29 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter3_                  -> Third indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter30_                 -> Letter 30 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter32_                 -> Letter 32 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter33_                 -> Letter 33 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter3a_                 -> Letter 3a (Alternative dynamic branch text variant for letter 3) **[Item] [Delivery]**
+_letter4_                  -> Fourth indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter45_                 -> Letter 45 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter46_                 -> Letter 46 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter47_                 -> Letter 47 (A specific indexed quest letter item variant) **[Item] [Delivery]**
+_letter4a_                 -> Letter 4a (Alternative dynamic branch text variant for letter 4) **[Item] [Delivery]**
+_letter5_                  -> Fifth indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter6_                  -> Sixth indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter7_                  -> Seventh indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter8_                  -> Eighth indexed narrative quest letter item objective **[Item] [Delivery]**
+_letter9_                  -> Ninth indexed narrative quest letter item objective **[Item] [Delivery]**
+_letterarrivaltime_        -> Letter Arrival Time (A quest timer calculating when a dynamic courier spawns to give you a note) **[Trigger]**
+_letterdelay_              -> Letter Delay (A script wait state or buffer time before an investigative note delivers) **[Trigger]**
+_lhotun_                   -> Prince Lhotun (The prominent royal NPC character asset, Prince of Sentinel, tied to the main questline) **[NPC] [Faction]**
+_lich_                     -> Lich (A powerful, spell-casting undead enemy boss resource target) **[NPC] [Combat]**
+_lichface_                 -> Lich Face (An engine placeholder tag, layout texture, or specific monstrous cosmetic item anchor) **[Item] [Trigger]**
+_llugwych_                 -> Castle Llugwych (The major high-level dungeon fort location resource in Ykalon) **[Location]**
+_local_                    -> Local Area (A generalized tracking zone bounding nearby town neighborhood structures) **[Location]**
+_location_                 -> Designated Location (A generic procedural coordinates hook targeting a script travel point) **[Location]**
+_lord_                     -> Noble Lord (An aristocratic male NPC contact, royal client, or authority figure) **[NPC]**
+_lordsmail_                -> Lord's Mail (The legendary artifact heavy armor chest piece item objective) **[Item]**
+_lostdung_                 -> Lost Dungeon (A remote or hidden dungeon location resource revealed via maps) **[Location]**
+_love_                     -> Love Status (A script event tracker tracking romantic affinity choices or relationship conditions) **[Trigger]**
+_lovehouse_                -> Love House (The residential home layout where an NPC's hidden partner resides) **[Location]**
+_lover_                    -> Lover (A romantic companion NPC target, rescue goal, or contact) **[NPC] [Rescue]**
+_loverhome_                -> Lover's Home (The residential house layout assigned to a romantic contact target) **[Location]**
+_lovgold_                  -> Lover's Gold (A specific chest stash or currency pouch item reward linked to an escort/rescue contract) **[Item]**
+_lysandustomb_             -> Lysandus's Tomb (The monumental story-critical dungeon location layout resource housing King Lysandus's spirit) **[Location]**
+_ma1_                      -> Main Quest Array Index 1 (A structural indexing slot tracking core plot variables) **[Trigger]**
+_mage_                     -> Mage (A standard robe-wearing, spell-casting human enemy variant or contact) **[NPC] [Combat]**
+_mage1_                    -> First Mage target (Used in multi-wizard hunt or ritual ambush arrays) **[NPC] [Combat]**
+_mage2_                    -> Second Mage target layout combat identifier **[NPC] [Combat]**
+_mage3_                    -> Third Mage target layout combat identifier **[NPC] [Combat]**
+_mage4_                    -> Fourth Mage target layout combat identifier **[NPC] [Combat]**
+_mageguild_                -> Mages Guild Hall (The physical academic building structure destination used for magical service hooks) **[Location]**
+_mages_                    -> Mages (Plural variable tracking a group, wave, or coven of aggressive spell-casters) **[NPC] [Combat]**
+_Mages_                    -> Mages Guild (Lower-case data hook reference verifying player ranking with the magic faction) **[Faction]**
+_magesguild_               -> Mages Guild Sanctuary (Alternative structural target mapping for a guild house container) **[Location]**
+_magic_                    -> Magical Aura (A dynamic layout effect tracker or spell type validation trigger) **[Trigger]**
+_magicitem_                -> Magic Item (A random enchanted weapon, armor, or clothing parcel item objective) **[Item] [Delivery]**
+_magicItem_                -> Magic Item explicit layout reference casing alternative **[Item] [Delivery]**
+_magicsword_               -> Magic Sword (An enchanted dynamic combat blade weapon item target) **[Item]**
+_makehelpfulletterarrive_ -> Make Helpful Letter Arrive (An event action forced to deliver advice notes if the player gets stuck) **[Trigger]**
+_maker_                    -> Creator / Fabricator (The professional crafter, smith, or coven worker NPC who created a quest item) **[NPC]**
+
+_makevictimreturn_       -> Make Victim Return (An event action forced to safely teleport or spawn an abducted NPC back home) **[Trigger]**
+_man_                    -> Generic Man (A common male citizen placeholder or generic civilian NPC contact) **[NPC]**
+_mansion_                -> Mansion (A wealthy noble or merchant's large residential building destination) **[Location]**
+_map_                    -> Map Handout (A dynamic world-map item that reveals hidden coordinates when examined) **[Item]**
+_map2_                   -> Second Map handout or secondary coordinate item variation **[Item]**
+_mapdung_                -> Map Dungeon (The target dungeon location layout where a crucial tracking map is hidden) **[Location]**
+_mapvict_                -> Map Victim (An item note found on a corpse detailing location coordinates) **[Item]**
+_mara_                   -> Benevolence of Mara (Data hook referencing the Temple faction of the Goddess of Love) **[Faction]**
+_marknpc_                -> Mark NPC (A script tracking flag highlighting a specific target on the player's compass/map) **[Trigger]**
+_master_                 -> Guild Master (The highest-ranking head official of a faction or active quest client) **[NPC]**
+_medora_                 -> Medora Direnni (The major main story character asset, sorceress trapped in Direnni Tower) **[NPC] [Faction]**
+_meetingplace_           -> Meeting Place (A designated tavern room or street corner for an item handoff or spy talk) **[Location]**
+_meetladyb_              -> Meet Lady B (A logic trigger tracking your entry into a rendezvous sequence with Lady Brisienna) **[Trigger]**
+_mensclothing_           -> Men's Clothing (A standard bulk garment parcel item objective used for delivery contracts) **[Item] [Delivery]**
+_merchant_               -> Merchant (A retail vendor, shopkeeper, or trading faction NPC contact) **[NPC]**
+_merchantdayletter_      -> Merchant Day Letter (A business or transaction document item active during standard shop hours) **[Item] [Delivery]**
+_merchantevidenceletter_ -> Merchant Evidence Letter (Incriminating trading paperwork or blackmail fraud documents) **[Item] [Delivery]**
+_merchantguilty_         -> Merchant Guilty (A quest state logging a trader's legal conviction for fraud or smuggling) **[Trigger]**
+_merchanthome_           -> Merchant Home (The residential house building layout assigned to a shopkeeper NPC) **[Location]**
+_merchantnight_          -> Merchant Night Event (A shady text script check for handling illicit black-market trade deals after hours) **[Trigger]**
+_merchants_              -> Merchants (Plural variable tracking a group, guild council, or faction node of traders) **[NPC] [Faction]**
+_messenger_              -> Messenger Courier (The physical NPC agent spawned to run up and deliver letters to the player) **[NPC]**
+_metal_                  -> Rare Metal Ore (A bulk sample parcel item objective like silver, gold, or elven raw metals) **[Item] [Delivery]**
+_mfriend_                -> Mutual Friend (An intermediate tracking link companion or proxy informant NPC contact) **[NPC]**
+_mg_                     -> Mages Guild shorthand tracking variable resource hook **[Faction]**
+_mggold_                 -> Mages Guild Gold (A dedicated chest vault stash or payment gold pile from a wizard guild master) **[Item]**
+_mguild_                 -> Mages Guild alternative short tracking handle **[Faction]**
+_missingperson_          -> Missing Person (The target victim NPC who has vanished or been captured by a dungeon faction) **[NPC] [Rescue]**
+_mistress_               -> Mistress / Lover (A noble's hidden partner or dynamic romantic client NPC contact) **[NPC]**
+_mistresshome_           -> Mistress Home (The residential house layout or hidden room housing a mistress contact) **[Location]**
+_mitem_                  -> Miscellaneous Item (A generic quest item objective placeholder wrapper) **[Item]**
+_mmap_                   -> Master Map (A primary quest-mapping plot piece that updates multiple fast-travel locations) **[Item]**
+_mmaster_                -> Master Monster / Lich (Internal code text tag for a high-ranking sorcerer or enemy boss unit) **[NPC] [Combat]**
+_mondead_                -> Monster Dead Validation (The engine script check verifying that a target quest boss is successfully slain) **[Trigger] [Combat]**
+_mondun_                 -> Monster Dungeon short tracking variable asset **[Location]**
+_mondung_                -> Monster Dungeon (The primary quest dungeon layout heavily populated by wild monster-type beasts) **[Location]**
+_mondung2_               -> Second Monster Dungeon alternative crypt or cave system variant **[Location]**
+_money_                  -> Currency Stash (A pile of gold pieces or banking letter of credit cash reward) **[Item]**
+_monk_                   -> Monk (A holy temple defender or unarmed spell-casting clerical NPC variant) **[NPC]**
+_monster_                -> Monster Entity (The primary target hostile beast or boss monster unit assigned to a coven/dungeon) **[NPC] [Combat]**
+_monster1_               -> First Monster target wave or multi-spawn beast asset identifier **[NPC] [Combat]**
+_monster2_               -> Second Monster target combat layout identifier **[NPC] [Combat]**
+_monster3_               -> Third Monster target combat layout identifier **[NPC] [Combat]**
+_monster4_               -> Fourth Monster target combat layout identifier **[NPC] [Combat]**
+_morgiah_                -> Princess Morgiah (The major royal NPC character asset, Princess of Wayrest from the main questline) **[NPC] [Faction]**
+_mtraitor_               -> Merchant Traitor (A specific corrupt merchant NPC target selling faction secrets to rivals) **[NPC] [Combat]**
+_mummy_                  -> Mummy (A high-health undead dungeon enemy that deals toxic disease damage) **[NPC] [Combat]**
+_murder_                 -> Murder Event (A dynamic tracking script checking if a target contact has been assassinated) **[Trigger]**
+_myndung_                -> Minor Dungeon (A smaller variant cave, tomb, or ruin location reference resource) **[Location]**
+_mynisera_               -> Mynisera data mapping handle string **[NPC]**
+_Mynisera_               -> Dowager Queen Mynisera (The story-critical royal NPC character asset, former Queen of Daggerfall) **[NPC] [Faction]**
+_necromancer_            -> Necromancer (An occult spell-caster human enemy variant that summons undead minions) **[NPC] [Combat]**
+_necromancerDead_        -> Necromancer Dead Check (A script tracking flag ensuring a dark sorcerer boss has been neutralized) **[Trigger] [Combat]**
+_necromancerletter_      -> Necromancer Letter (A dark occult message scroll or blood-ink conspiracy document item) **[Item] [Delivery]**
+
+_necs_                    -> Necromancers (Plural tracking variable for a faction wave or coven of dark sorcerers) **[NPC] [Faction] [Combat]**
+_newdung_                 -> New Dungeon (A dynamically chosen or newly revealed quest destination cave/crypt) **[Location]**
+_newplace_                -> New Place (A dynamically designated target building or town layout destination) **[Location]**
+_nightblade_              -> Nightblade (An agile magic-using stealth assassin human enemy variant or contact) **[NPC] [Combat]**
+_nighttime_               -> Nighttime Condition (A script clock gate checking if it is currently dark outside) **[Trigger]**
+_no_                      -> Refusal Choice (A dialogue branch gate triggered if the player selects "No" to a prompt) **[Trigger]**
+_noble_                   -> Aristocrat / Noble (A high-class regional noble NPC contact, client, or rescue target) **[NPC]**
+_nobledayletter_          -> Noble Day Letter (A formal message or legal paperwork delivered during standard daytime hours) **[Item] [Delivery]**
+_nobleevidenceletter_     -> Noble Evidence Letter (Incriminating paperwork or blackmail documents targeting an aristocrat) **[Item] [Delivery]**
+_nobleguilty_             -> Noble Guilty (A quest state logging a lord or lady's legal conviction for treason or crimes) **[Trigger]**
+_noblehome_               -> Noble Home (The residential house building layout assigned to an aristocratic NPC) **[Location]**
+_noblehouse_              -> Noble House (Alternative upper-class mansion structural target container) **[Location]**
+_nobleman_                -> Nobleman (An individual high-class male citizen NPC contact or target) **[NPC]**
+_noblenight_              -> Noble Night Event (A dialogue or event hook handling shady noble activities after dark) **[Trigger]**
+_nobodyismyfriend_        -> Nobody Is My Friend (A specific internal layout variable tracking maximum faction hostility or isolation) **[Trigger]**
+_noChoice_                -> No Choice (A logic branch forcing a specific quest path forward without a prompt) **[Trigger]**
+_noevidenceconfrontation_ -> No Evidence Confrontation (A dialogue loop where a suspect laughs you off because you lack proof) **[Trigger]**
+_noMagicItem_             -> No Magic Item (A script outcome where the magical reward is stripped, often due to failure) **[Trigger]**
+_nomap_                   -> No Map (A fallback tracking condition applied if a dungeon layout fails to drop coordinates) **[Trigger]**
+_nononono_                -> Absolute Refusal Loop (An emergency developer or extreme dialogue branch refusal anchor) **[Trigger]**
+_nope_                    -> Short Refusal (A casual alternative dialogue prompt tracking option for saying no) **[Trigger]**
+_normalvict_              -> Normal Victim (A baseline human casualty corpse container or kidnapped hostage placeholder) **[NPC] [Item]**
+_note_                    -> Short Note (A minor text document parcel item used for local delivery contracts) **[Item] [Delivery]**
+_notkill_                 -> Do Not Kill Condition (A critical quest constraint that causes immediate failure if a specific target is slain) **[Trigger]**
+_notyet_                  -> Not Yet Ready (A logic check running if the player returns to a client before completing goals) **[Trigger]**
+_npc_                     -> Generic Character (The baseline structural tracking anchor for any standalone script NPC contact) **[NPC]**
+_npc1_                    -> First Generic NPC participant in multi-character conversation layouts **[NPC]**
+_npc2_                    -> Second Generic NPC participant in multi-character conversation layouts **[NPC]**
+_npc3_                    -> Third Generic NPC participant in multi-character conversation layouts **[NPC]**
+_npcclicked_              -> NPC Clicked (An interaction hook verifying that a specific target was actively selected) **[Trigger]**
+_nulfaga_                 -> Nulfaga the Witch (The major main story character asset, the mad Queen Mother of Daggerfall) **[NPC] [Faction]**
+_oblivion_                -> Oblivion Realm (A Daedric planar anchor, portal zone, or external dungeon destination) **[Location]**
+_of_                      -> Name Prefix Token (A connecting structural layout modifier code fragment) **[Trigger]**
+_of_Clavicus_             -> ...of Clavicus Vile (Part of a Daedric summoning coven or faction artifact name string) **[Faction] [Item]**
+_of_Molag_                -> ...of Molag Bal (Part of a vampire coven or Daedric faction questline tracking string) **[Faction] [Item]**
+_of_The_                  -> ...of The... (A joining syntax fragment for procedural military order or guild layouts) **[Faction]**
+_old_                     -> Elderly Modifier (An age-related asset attribute checking or forcing senior NPC models) **[NPC]**
+_oneday_                  -> One Day Timer (A precise 24-hour quest clock countdown increment) **[Trigger]**
+_onehour_                 -> One Hour Timer (A tight 60-minute script deadline countdown loop) **[Trigger]**
+_oneyear_                 -> One Year Timer (An exceptionally long plot timer typically used to break permanent global world states) **[Trigger]**
+_onsite_                  -> On Site Check (A validation verify if the player has reached the exact coordinates of an objective) **[Trigger]**
+_oracle_                  -> Oracle (A powerful seer, witch leader, or temple informant NPC contact) **[NPC]**
+_oracleMsg_               -> Oracle Message (A cryptic or prophetic text scroll item or pop-up warning dialogue block) **[Item] [Trigger]**
+_oracleNote_              -> Oracle Note (A layout page clue document detailing secret coven whereabouts) **[Item] [Delivery]**
+_oracletemple_            -> Oracle Temple (The specific localized sanctuary structure layout housing a prophet NPC) **[Location]**
+_orc_                     -> Orc Warrior (A green-skinned physical combatant enemy or regional resident NPC) **[NPC] [Combat]**
+_orc1_                    -> First Orc target (Used in multi-orc fortress hunts or patrol spawns) **[NPC] [Combat]**
+_orc2_                    -> Second Orc target combat layout identifier **[NPC] [Combat]**
+_orc3_                    -> Third Orc target combat layout identifier **[NPC] [Combat]**
+_orc4_                    -> Fourth Orc target combat layout identifier **[NPC] [Combat]**
+_orcletter_               -> Orcish Letter (A crude political message or threat document item written by Orsinium forces) **[Item] [Delivery]**
+_Order_of_                -> Order of... (Prefix layout handle used to define Knightly military factions, like Order of the Candle) **[Faction]**
+_orsinium_                -> Orsinium Faction (Lower-case reference tracker checking reputation with Gortwog's Orc kingdom) **[Faction]**
+_Orsinium_                -> Orsinium Region (The primary mountain fortress city location resource housing the Orc court) **[Location]**
+_other_                   -> Miscellaneous Asset (A context-sensitive secondary resource modifier or flexible quest hook slot) **[Trigger]**
+
+_out_                    -> Go Outside (An outdoor cell transition switch or logic check for when the player leaves a building) **[Trigger]**
+_outgoing_               -> Outgoing Courier (A script status tracking a messenger who is actively moving away from the player) **[Trigger]**
+_page1_                  -> Page 1 (The first indexed text page item component of a broken book, ledger, or dynamic diary puzzle) **[Item] [Delivery]**
+_page10_                 -> Tenth indexed text page item variant resource **[Item] [Delivery]**
+_page11_                 -> Eleventh indexed text page item variant resource **[Item] [Delivery]**
+_page12_                 -> Twelfth indexed text page item variant resource **[Item] [Delivery]**
+_page13_                 -> Thirteenth indexed text page item variant resource **[Item] [Delivery]**
+_page14_                 -> Fourteenth indexed text page item variant resource **[Item] [Delivery]**
+_page15_                 -> Fifteenth indexed text page item variant resource **[Item] [Delivery]**
+_page2_                  -> Second indexed text page item component **[Item] [Delivery]**
+_page3_                  -> Third indexed text page item component **[Item] [Delivery]**
+_page4_                  -> Fourth indexed text page item component **[Item] [Delivery]**
+_page5_                  -> Fifth indexed text page item component **[Item] [Delivery]**
+_page6_                  -> Sixth indexed text page item component **[Item] [Delivery]**
+_page6a_                 -> Page 6a (An alternative branched or context-specific version of the sixth text page) **[Item] [Delivery]**
+_page7_                  -> Seventh indexed text page item component **[Item] [Delivery]**
+_page8_                  -> Eighth indexed text page item component **[Item] [Delivery]**
+_painting_               -> Stolen Painting (A heavy decorative art object item objective often used in noble heist or burglary contracts) **[Item] [Delivery]**
+_palace_                 -> Royal Palace (The central castle interior layout map resource hosting the regional king, queen, or court) **[Location]**
+_patsy_                  -> Patsy / Scapegoat (An innocent target NPC set up to take the fall for a crime by the script antagonist) **[NPC]**
+_pawn_                   -> Pawnshop (A local commercial pawnbroker retail store structure destination line) **[Location]**
+_pcfailed_               -> Player Failed Check (A failure logic gate triggered if the player breaks quest constraints or misses a timeline) **[Trigger]**
+_pcgetsgold_             -> Player Receives Gold (The direct transaction logic action feeding coins into the character's purse) **[Trigger]**
+_pcgetsgold1_            -> First sequential gold reward modifier branch **[Trigger]**
+_pcgetsgold2_            -> Second sequential gold reward modifier branch **[Trigger]**
+_pcgetsgold3_            -> Third sequential gold reward modifier branch **[Trigger]**
+_pchasitem_              -> Player Has Item Check (The baseline inventory validation verifying that a required quest goal is actively held) **[Trigger]**
+_pchasitem1_             -> First sequential inventory check tracking secondary plot assets **[Trigger]**
+_pchasitem2_             -> Second sequential inventory check tracking secondary plot assets **[Trigger]**
+_pchasitem3_             -> Third sequential inventory check tracking secondary plot assets **[Trigger]**
+_pickspawn_              -> Pick Ambush Spawn (A selective directive routing randomized rogue or assassin spawns directly onto the player) **[Trigger] [Combat]**
+_pickupitem_             -> Pickup Item Target (An action tracker confirming a dropped package or ground loot asset was successfully grabbed) **[Trigger]**
+_pickuplocal_            -> Local Pickup Location (The specific neighborhood city building where a delivery package is held) **[Location]**
+_pickupregion_           -> Regional Pickup Location (A distant town or specific coven site located outside the current province boundary) **[Location]**
+_place_                  -> Generic Travel Place (A procedural coordinate script hook targeting any generic travel spot) **[Location]**
+_placemap_               -> Place Map Marker (An active script action command that forces a dungeon or town coordinates block onto the player's map) **[Trigger]**
+_PlayerArrived_          -> Player Arrived Verification (A spatial cell check confirming that the character successfully reached the destination map) **[Trigger]**
+_plot_                   -> Plot Progression Flag (An internal structural code layout tracker defining core narrative branches) **[Trigger]**
+_poet_                   -> Poet (An aristocratic bard, writer, or scholar NPC contact type) **[NPC]**
+_poison_                 -> Vial of Poison (A toxic quest item used for murder plots, dark brotherhood assignments, or assassination gear) **[Item]**
+_posse_                  -> Hostile Posse (A multi-unit combat wave spawn tracking an aggressive pursuing squad of guards or thugs) **[NPC] [Combat]**
+_potion_                 -> Alchemical Potion (A dynamic magical brew, healing elixir, or specific quest fluid remedy parcel item) **[Item] [Delivery]**
+_preventspawn_           -> Prevent Ambush Spawn (A script override toggle disabling aggressive random spawns, often used during safety windows) **[Trigger]**
+_priest_                 -> Temple Priest (A clerical faction holy worker, cleric, or altar merchant NPC contact) **[NPC]**
+_priestdayletter_        -> Priest Day Letter (A holy manuscript or temple transaction note valid during regular daytime hours) **[Item] [Delivery]**
+_priestevidenceletter_   -> Priest Evidence Letter (Incriminating coven heresy paperwork or blackmail files targeting a cleric) **[Item] [Delivery]**
+_priestgivesitem_        -> Priest Gives Item (The specific script action command running a holy artifact hand-over to the player) **[Trigger]**
+_priestguilty_           -> Priest Guilty (A quest state logging a temple cleric's corruption or betrayal conviction) **[Trigger]**
+_priesthome_             -> Priest Home (The private urban residence layout assigned to a church worker NPC target) **[Location]**
+_priestnight_            -> Priest Night Event (A shady nocturnal dialogue or meeting script track handling secretive coven/temple plots) **[Trigger]**
+_prophet_                -> Prophet / Seer (A powerful oracular religious worker, mystic, or cult leader NPC contact) **[NPC]**
+_prophouse_              -> Prop House (An old classic developer prop testing layout block or testing safehouse location) **[Location]**
+_qgclearclick_           -> Quest Giver Clear Click (A dialogue loop interface reset variable clearing prompt selections) **[Trigger]**
+_qgclick2_               -> Quest Giver Secondary Click (An interaction check capturing a secondary narrative prompt or alternative path) **[Trigger]**
+_qgclicked_              -> Quest Giver Clicked Verification (The primary script validation logic tracking conversation initiation with your employer) **[Trigger]**
+
+_qgenemy_                    -> Quest Giver Enemy (A script flag marking your original employer as hostile, usually due to betrayal) **[NPC] [Combat]**
+_qgfriend_                   -> Quest Giver's Friend (An allied tracking contact or middleman NPC linked to the employer) **[NPC]**
+_qgiver_                     -> Quest Giver Shorthand (Alternative short reference string variable pointing back to the client) **[NPC]**
+_qgiverhome_                 -> Quest Giver's Home (The private residence layout or interior building of the hiring employer) **[Location]**
+_qgtalk_                     -> Quest Giver Dialogue (The active script dialogue structure tree used for contract conversation lines) **[Trigger]**
+_qtime_                      -> Quest Timer Clock (The baseline tracking countdown variable managing general script timelines) **[Trigger]**
+_queen_                      -> Sovereign Queen (A royal court ruler NPC contact or story-critical character client anchor) **[NPC] [Faction]**
+_queenreward_                -> Queen's Reward (A high-tier, specialized royal payout structure feeding rare gear or high gold piles) **[Trigger]**
+_questcleanup_               -> Quest Cleanup (An automated engine housekeeping command that safely deletes temporary corpses, items, and NPCs) **[Trigger]**
+_questdone_                  -> Quest Done Status (The complete logic gate verifying all victory conditions are achieved to end tracking safely) **[Trigger]**
+_questg_                     -> Quest Giver Variant (Shorthand variable mapping duplicate reference checks) **[NPC]**
+_questgiver_                 -> Quest Giver Explicit (The primary master anchor tracking the script contract employer link) **[NPC]**
+_queston_                    -> Quest Active Check (The primary master global boolean flag tracking if this specific script module is running) **[Trigger]**
+_queston1_                   -> Quest Phase 1 Active (A specialized structural tracking state checking if the first milestone is open) **[Trigger]**
+_queston2_                   -> Quest Phase 2 Active (A specialized structural tracking state checking if the second milestone is open) **[Trigger]**
+_questorClicked_             -> Questor Clicked Verification (A dialogue logic gate verifying you initiated conversation with the client) **[Trigger]**
+_questtime_                  -> Quest Duration Tracker (An internal countdown variable monitoring active operational hours) **[Trigger]**
+_questtimelimit_             -> Quest Time Limit (The maximum concrete hard-deadline date ceiling before an automatic failure sequence pops) **[Trigger]**
+_questWin_                   -> Quest Win Trigger (The direct success completion event execution block firing payouts and reputation shifts) **[Trigger]**
+_ranger_                     -> Ranger (A wilderness explorer, wood-craft marksman, or hostile archer NPC combatant type) **[NPC] [Combat]**
+_rat_                        -> Giant Rat (A basic, low-tier beast enemy resource target typically found in sewers or early dungeons) **[NPC] [Combat]**
+_rats_                       -> Giant Rats (Plural spawn variable tracking a small pack or cave wave of low-level beast enemies) **[NPC] [Combat]**
+_readincriminatingletter_    -> Read Incriminating Letter (A text-reading logic hook checking if the player exposed a blackmail message) **[Trigger]**
+_readletter_                 -> Read Letter Verification (A text action hook tracking if a delivery package document was actively opened) **[Trigger]**
+_readmap_                    -> Read Map Verification (An inspection validation logic hook marking new coordinates on your fast travel travel book) **[Trigger]**
+_readnote_                   -> Read Note Verification (A minor text action handler checking if a small scrap alert text was displayed) **[Trigger]**
+_real_                       -> Authentic Item (A structural verification tag identifying the true objective out of multiple fake clones) **[Item]**
+_realmummy_                  -> True Mummy (The active, dangerous combat monster unit hidden behind a fake sarcophagus trick) **[NPC] [Combat]**
+_realtalk_                   -> Real Talk Dialogue (A specialized truth-revealing or critical plot-advancing text path script branch) **[Trigger]**
+_rebel_                      -> Rebel Combatant (A rogue faction soldier, underground partisan, or hostile anti-royal NPC unit) **[NPC] [Combat]**
+_rebelhouse_                 -> Rebel Safehouse (The residential building layout or secret headquarters used by underground cells) **[Location]**
+_rebuff_                     -> Request Rebuffed (A dialogue loop block running if an NPC aggressively declines to talk or cooperate) **[Trigger]**
+_refuseconfess_              -> Refuse to Confess (A suspect dialogue script path where a criminal refuses to break under interrogation) **[Trigger]**
+_relartifact_                -> Religious Artifact (A highly valuable, coven-blessed holy or unholy relic quest item objective) **[Item]**
+_relic_                      -> Ancient Relic (A powerful antique loot parcel item, often tied to archaeological or Daedric runs) **[Item]**
+_religiousitem_              -> Religious Item (A divine token, holy symbol, or church offering asset resource objective) **[Item] [Delivery]**
+_religitem_                  -> Religious Item Shorthand (Alternative syntax variable shortcut mapping holy items) **[Item] [Delivery]**
+_reminderwitness_            -> Reminder Witness (A secondary text backup path prompting an eyewitness to re-state their clues) **[Trigger]**
+_remindpc_                   -> Remind Player Notification (An automated calendar log entry or travel warning text pop-up message) **[Trigger]**
+_replace_                    -> Replace Resource (A developer template script layout switcher swapping object properties dynamically) **[Trigger]**
+_rescueitem_                 -> Rescue Item Target (An item retrieval goal tracking the location of a stolen heirloom or relic) **[Item] [Rescue]**
+_reset_                      -> Reset Module (An engine state script block clearing localized data fields or repeating wave configurations) **[Trigger]**
+_resistsurrender_            -> Resists Surrender Check (A hostile boss logic condition forcing an enemy to fight to the death) **[Trigger] [Combat]**
+_Resolution_of_              -> Resolution of... (Prefix text string syntax used to parse regional temple court factions, like Resolution of Z'en) **[Faction]**
+_retrievegem_                -> Retrieve Gem Objective (A progress tracker flag confirming a rare stone was successfully pocketed) **[Trigger]**
+_revealmerchantannoyingwitness_ -> Reveal Merchant Annoying Witness (Event action updating map markers for an investigative quest branch) **[Trigger]**
+_revealmerchanthonestmistake_   -> Reveal Merchant Honest Mistake (Event action mapping out an oversight or path resolution step) **[Trigger]**
+_revealmonsters_             -> Reveal Monsters (A dungeon layout pulse command that visually pops or wakes up hidden beast clusters) **[Trigger] [Combat]**
+_revealnobleannoyingwitness_    -> Reveal Noble Annoying Witness (Event script command forcing map disclosure for a high-class witness) **[Trigger]**
+_revealnoblehonestmistake_      -> Reveal Noble Honest Mistake (Dialogue path option updating maps for a noble investigative step) **[Trigger]**
+_revealpriestannoyingwitness_   -> Reveal Priest Annoying Witness (Event script command exposing a coven or temple informant spot) **[Trigger]**
+_revealpriesthonestmistake_     -> Reveal Priest Honest Mistake (Dialogue path choice locating an asset for a church worker track) **[Trigger]**
+_revealsham_                 -> Reveal Sham (A story-advancing script block breaking an illusion or revealing a plot scam hoax) **[Trigger]**
+_revealthiefannoyingwitness_    -> Reveal Thief Annoying Witness (Event action uncovering a hiding spot for a rogue eyewitness contact) **[Trigger]**
+_revealthiefhonestmistake_      -> Reveal Thief Honest Mistake (Dialogue resolution node tracking a rogue faction investigation step) **[Trigger]**
+
+_revenge_                 -> Revenge Event (An ambush event script trigger that spawns hostile waves based on your past enemies) **[Trigger] [Combat]**
+_reward_                  -> Primary Reward Block (The structural script engine node that gives gold or items upon quest completion) **[Trigger]**
+_reward1_                 -> First sequential reward modifier branch asset **[Trigger]**
+_reward2_                 -> Second sequential reward modifier branch asset **[Trigger]**
+_reward3_                 -> Third sequential reward modifier branch asset **[Trigger]**
+_rewardPlayer_            -> Reward Player Execution (The direct code action adding reputation, ranks, or goods into your character sheet) **[Trigger]**
+_ring_                    -> Magical Ring (A valuable wearable quest jewelry item objective often containing enchantments) **[Item] [Delivery]**
+_ringdung_                -> Ring Dungeon (The specific target dungeon location layout where a quest ring is hidden) **[Location]**
+_ripperhouse_             -> Ripper House (The crime scene house cell location where a serial killer NPC operates or strikes) **[Location]**
+_rippername_              -> Ripper Name (A dynamic string alias variable holding the true identity of a local killer suspect) **[NPC]**
+_rock_                    -> Raw Ore / Stone Piece (A heavy mineral item sample objective used for local delivery runs) **[Item] [Delivery]**
+_rogue_                   -> Rogue Thief (An agile, hostile martial enemy variant or underworld criminal contact NPC) **[NPC] [Combat]**
+_ruler_                   -> Regional Ruler (A generic placeholder tracking the local lord, baron, king, or queen of the province) **[NPC] [Faction]**
+_rulerclicked_            -> Ruler Clicked Verification (A dialogue logic gate tracking if the player initiated talk with the regional lord) **[Trigger]**
+_safehouse_               -> Safehouse Hideout (A secure, designated interior building target layout used by criminal cells or refugees) **[Location]**
+_sage_                    -> Sage Scholar (An ancient loremaster, wizard, or old wise informant NPC contact) **[NPC]**
+_scarab_                  -> Scarab Talisman (A unique antique artifact or insect-shaped jewelry item objective) **[Item]**
+_scholar_                 -> Scholar Academic (An educated researcher, library worker, or investigator NPC target) **[NPC]**
+_scholardung_             -> Scholar Dungeon (The specific dungeon layout cell where a kidnapped academic is being held prisoner) **[Location] [Rescue]**
+_scholarreward_           -> Scholar's Reward (A specialized text page layout or scroll item payload given by a researcher) **[Trigger] [Item]**
+_school_                  -> Learning School (A public academic training building or specialized temple faction wing layout) **[Location]**
+_School_of_               -> School of... (Prefix text string format mapping specialized temple factions, like School of Julianos) **[Faction]**
+_scorpions_               -> Giant Scorpions (Highly toxic, hard-hitting monstrous beast enemies used in desert/dungeon layouts) **[NPC] [Combat]**
+_scourgbarrow_            -> Scourge Barrow (The massive, story-critical mountain crypt dungeon layout location resource) **[Location]**
+_secondwitnessdiscussion_ -> Second Witness Discussion (The script logic checkpoint analyzing an alternative eyewitness's testimony) **[Trigger]**
+_seducer_                 -> Daedra Seducer (A powerful, winged Daedric enemy combat target capable of devastating magical spells) **[NPC] [Combat]**
+_sentinel_                -> Sentinel Region (Lower-case data hook referencing the desert kingdom or court factions of Sentinel) **[Faction]**
+_sham_                    -> Sham / Hoax (A story tracking flag checking if an event or item is a deceptive illusion or scam) **[Trigger]**
+_shamandead_              -> Shaman Dead Check (A script milestone condition verifying a tribal or monster boss unit is slain) **[Trigger] [Combat]**
+_shamtalk_                -> Sham Dialogue Tree (The conversation logic path handling confrontational text loops with a fraud suspect) **[Trigger]**
+_shedungent_              -> Shedu Dungeon (A specific high-tier layout file variant assigned to custom dungeon objectives) **[Location]**
+_shop_                    -> Commercial Shop (A generic urban retail merchant store structure target destination line) **[Location]**
+_shortdelay_              -> Short Delay Timer (A brief script pause buffer waiting a few in-game hours before executing an event) **[Trigger]**
+_ShowResult_              -> Show Result Log (An internal developer layout print command or UI notice displaying variable states) **[Trigger]**
+_sister_                  -> Sister (A relative family NPC target, hostage, or direct escort contract milestone objective) **[NPC] [Rescue] [Escort]**
+_Sisters_of_the_          -> Sisters of the... (Prefix text string format defining specialized coven or witch factions) **[Faction]**
+_sistershouse_            -> Sister's House (The residential home layout where a target contact's sister lives) **[Location]**
+_skeffingcoven_           -> Skeffington Coven (The specific regional High Rock witch coven location map marker resource) **[Location] [Faction]**
+_skeleton_                -> Skeleton Warrior (A common undead dungeon melee combat variant armed with classic blades) **[NPC] [Combat]**
+_slain_                   -> Target Slain Verification (The critical core engine checker logging that your quest goal was assassinated) **[Trigger] [Combat]**
+_slainBarbarians_         -> Slain Barbarians Tracker (A numerical tally logic checking if a wave of outlanders was neutralized) **[Trigger] [Combat]**
+_slainKnights_            -> Slain Knights Tracker (A victory condition checker verifying all armored defenders were defeated) **[Trigger] [Combat]**
+_sleepingmage_            -> Sleeping Mage (A specific unconscious or magically paralyzed wizard NPC asset target) **[NPC]**
+_snitch_                  -> Snitch Informant (An underworld spy or rogue witness NPC contact holding secret crime data) **[NPC]**
+_snitch0_                 -> First sequential snitch logic handler checkpoint variable **[NPC]**
+_soldier_                 -> Soldier Combatant (A standard armed guard, military grunt, or hostile patrol warrior unit) **[NPC] [Combat]**
+_someitem_                -> Generic Item Placeholder (A flexible item resource mapping asset used for randomized fetch tasks) **[Item]**
+_someperson_              -> Generic Person Placeholder (A flexible citizen script template used to generate random town contacts) **[NPC]**
+_sorceror_                -> Sorcerer / Sorceress (A heavily armored magic-casting enemy class human target variant) **[NPC] [Combat]**
+_spawn1_                  -> First specific wave cell combat coordinate layout generator **[Trigger] [Combat]**
+_spawn2_                  -> Second specific wave cell combat coordinate layout generator **[Trigger] [Combat]**
+_spawn3_                  -> Third specific wave cell combat coordinate layout generator **[Trigger] [Combat]**
+_spawn4_                  -> Fourth specific wave cell combat coordinate layout generator **[Trigger] [Combat]**
+_spawnBarbarians_         -> Spawn Barbarians Command (The dynamic trigger script injecting an outlander ambush crew onto the map) **[Trigger] [Combat]**
+_spawnenemy_              -> Spawn Enemy Command (The base engine logic command launching immediate hostile spawns around the player) **[Trigger] [Combat]**
+
+_spawnGiants_             -> Spawn Giants Command (Dynamic script action injecting high-health giant monsters onto the map) **[Trigger] [Combat]**
+_spawnKnights_            -> Spawn Knights Command (Dynamic script action injecting a squad of elite armored defenders) **[Trigger] [Combat]**
+_spellScroll_             -> Spell Scroll (A single-use magical scroll item objective required for a guild delivery) **[Item] [Delivery]**
+_spellsword_              -> Spellsword (A versatile enemy class or contact wielding both blade and destruction magic) **[NPC] [Combat]**
+_spider_                  -> Giant Spider (A creepy crawler dungeon enemy that can paralyze the player with venom) **[NPC] [Combat]**
+_spiders_                 -> Giant Spiders (Plural spawn variable tracking a nest wave of venomous crawlers) **[NPC] [Combat]**
+_spouse_                  -> Spouse (The player's or an NPC's husband/wife rescue target or key dialogue contact) **[NPC] [Rescue]**
+_spriggan_                -> Spriggan (A rare, regenerating nature-spirit monster enemy target found inside deep caves) **[NPC] [Combat]**
+_spy_                     -> Spy Informant (An undercover agent or double-agent tracking faction data) **[NPC]**
+_staff_                   -> Magical Staff (A powerful two-handed blunt weapon item objective often containing dynamic enchantments) **[Item] [Delivery]**
+_staffdung_               -> Staff Dungeon (The specific target crypt layout where a magical staff item is hidden) **[Location]**
+_stagger_                 -> Stagger Timer Check (An internal script buffer pausing execution states to coordinate event offsets) **[Trigger]**
+_startpatsy_              -> Start Patsy Sequence (A logic event initiating a setup framework to frame an innocent NPC) **[Trigger]**
+_stendarr_                -> Temple of Stendarr (Data hook tracking your faction standing with the God of Righteous Might) **[Faction]**
+_store_                   -> General Store (A standard commercial urban merchant building structure destination) **[Location]**
+_storehouse_              -> Storehouse Warehouse (A large storage structure, storage dock, or supply building resource) **[Location]**
+_stronghold_              -> Stronghold Outpost (An Orcish fort, heavy stone wall fortification, or bandit military base) **[Location]**
+_success_                 -> Success Completion (The milestone layout evaluating if a sub-task or choice turned out perfectly) **[Trigger]**
+_summonNecromancer_       -> Summon Necromancer (An active script spell trigger spawning an occult spellcaster nearby) **[Trigger] [Combat]**
+_surrenderchoice_         -> Surrender Choice Prompt (A dual-branch dialogue choice when a beaten enemy yields to negotiate) **[Trigger] [Combat]**
+_talisman_                -> Magical Talisman (A wearable neckpiece, ward token, or unique occult quest relic artifact) **[Item]**
+_talkguardian_            -> Talk to Guardian (Dialogue loop sequence interacting with a protector unit before a fight) **[Trigger]**
+_target_                  -> Main Objective Target (The primary core entity, enemy lord, or item focus of the entire script) **[NPC] [Item]**
+_targethouse_             -> Target House (The specific residential building where your primary objective or suspect hides) **[Location]**
+_tavern_                  -> Local Tavern (A standard public house, inn, or commercial drinking layout destination) **[Location]**
+_teacher_                 -> Faction Trainer / Teacher (A specialized academic NPC contact who upgrades dynamic player skills) **[NPC]**
+_teleportpc_              -> Teleport Player (A powerful script directive shifting the character immediately to a fresh cell location) **[Trigger]**
+_teller_                  -> Bank Teller (The financial service NPC inside a city bank who exchanges gold pieces for letters) **[NPC]**
+_temple_                  -> Local Temple (A standard religious sanctuary house, altar wing, or divine coven site) **[Location]**
+_Temple_of_               -> Temple of... (Prefix text string configuration parsing specific church factions, like Temple of Stendarr) **[Faction]**
+_TestBuilding_            -> Debug Test Building (An internal layout building anchor utilized for code logic formatting checks) **[Location]**
+_tg_                      -> Thieves Guild Shorthand (Abbreviated data hook validation monitoring rogue guild mechanics) **[Faction]**
+_tguild_                  -> Thieves Guild Handle (Alternative syntax shortcut used for underworld network tracks) **[Faction]**
+_thanks_                  -> Short Gratitude (A basic dialogue loop response displaying appreciation text after hand-ins) **[Trigger]**
+_thankyou_                -> Full Gratitude Dialogue (The final contract script closing line thanking the character for success) **[Trigger]**
+_thd_                     -> Third Address Title (A dynamic text formatting prefix string variable handling noble titles) **[Trigger]**
+_thief_                   -> Underworld Thief (A stealthy rogue class variant enemy or black-market faction contact NPC) **[NPC] [Combat]**
+_thiefdayletter_          -> Thief Day Letter (An illicit smuggling note or rogue tracking slip valid during standard light hours) **[Item] [Delivery]**
+_thiefevidenceletter_     -> Thief Evidence Letter (Incriminating paperwork tracking thieves' guild warehouse robbery plans) **[Item] [Delivery]**
+_thiefFoe_                -> Thief Foe (A rival gang member, aggressive pickpocket, or hostile rogue unit tracking you) **[NPC] [Combat]**
+_thiefguilty_             -> Thief Guilty (A quest outcome registering a rogue's capture, legal exposure, or prison sentence) **[Trigger]**
+_thiefhome_               -> Thief Home (The private hidden urban residence assigned to a local rogue NPC asset) **[Location]**
+_thiefhouse_              -> Thief House Safehouse (A regular residential house layout converted into an underworld fence hideout) **[Location]**
+_thiefmember_             -> Thieves Guild Member (An official underworld contact or shadow network agent NPC) **[NPC]**
+_thiefnight_              -> Thief Night Event (A shady nocturnal dialogue or meeting track handling stealth burglary choices) **[Trigger]**
+_thiefplace_              -> Thief Placement Spot (The precise coordinate corner or back alley room where a thief contact waits) **[Location]**
+_thieves_                 -> Thieves (Plural tracking variable spawning an aggressive pack of pickpockets or pick-squad thugs) **[NPC] [Combat]**
+_thievesguild_            -> Thieves Guild front (The tavern cellar, hidden sewer hole, or shop hub utilized by local rogues) **[Location]**
+_thievesguildletter_      -> Thieves Guild Letter (A covert criminal network document detailing fence contacts or heists) **[Item] [Delivery]**
+_thug_                    -> Street Thug (A low-tier physical heavy enforcer brawler variant spawned for ambushes) **[NPC] [Combat]**
+_tiger_                   -> Sabertooth Tiger (A vicious wild animal monster enemy resource used to guard dungeon paths) **[NPC] [Combat]**
+_time_                    -> Baseline Time Clock (The global tracking calendar countdown value measuring general quest updates) **[Trigger]**
+_time1_                   -> First sequential deadline extension modifier clock variable **[Trigger]**
+_time2_                   -> Second sequential deadline extension modifier clock variable **[Trigger]**
+
+_timeforq_            -> Time for Quest (The specific countdown timer allocated to travel to the quest destination) **[Trigger]**
+_timeLimit_           -> Time Limit Deadline (The strict calendar hard-cap date that forces a quest to instantly fail) **[Trigger]**
+_timeout_             -> Timeout Condition (A script state trigger running when a secondary objective's clock runs out) **[Trigger]**
+_timer_               -> Core Timer (The baseline milestone clock managing dynamic intervals between script phases) **[Trigger]**
+_timer1_              -> First sequential backup timer or countdown buffer variable **[Trigger]**
+_timeup_              -> Time Up Validation (The engine logic gate checking if a primary duration has expired) **[Trigger]**
+_token_               -> Faction Token (A specialized quest item check like a key, permit, or symbolic guild pass) **[Item]**
+_toopoor_             -> Too Poor Penalty (A dialogue loop condition applied if the player lacks enough gold to complete a buy-in) **[Trigger]**
+_total_               -> Total Tally (A numerical layout script aggregator tracking total kills or items collected) **[Trigger]**
+_totaltime_           -> Total Time Allocation (The absolute maximum master clock setting bounding the entire quest file) **[Trigger]**
+_totem_               -> Totem of Tiber Septim (The high-tier, story-critical legendary artifact item objective) **[Item]**
+_totemspeaks_         -> Totem Speaks (The major main story prompt trigger event where the Totem forces a telepathic warning) **[Trigger]**
+_towertime_           -> Tower Time Tracker (A localized quest clock managing islands, Direnni tower runs, or specific cell limits) **[Trigger]**
+_townhouse_           -> Townhouse Residential (A standard urban multi-story citizen residence building target layout) **[Location]**
+_traitor_             -> Traitor / Fugitive (A specific undercover defector, deserter, or faction rule-breaker NPC target) **[NPC] [Combat]**
+_traitordead_         -> Traitor Dead Verification (A critical victory condition tracking if a target defector has been assassinated) **[Trigger] [Combat]**
+_traitorreward_       -> Traitor's Payout (An alternative dark reward parcel or dirty gold cache earned by siding with a traitor) **[Trigger] [Item]**
+_transporter_         -> Transporter Mage (A Mages Guild service provider NPC handling linear fast travel portal networks) **[NPC]**
+_traveltime_          -> Travel Time Calculation (An internal speed modifier tracking how many days are added by overland transit) **[Trigger]**
+_treasure_            -> Treasure Cache (A dynamic high-value container item objective, like gold bars or fine art) **[Item]**
+_try_                 -> Try Counter (An internal script retry tracker counting player entry or attempt checks on riddles) **[Trigger]**
+_TUTOR_               -> Debug Tutorial Variable (A structural engine tutorial guideline string or layout tester anchor) **[Trigger]**
+_ukcrypt_             -> Underking Crypt (A specific high-level hidden tomb or ancient relic dungeon resource target) **[Location]**
+_underking_           -> Underking Faction (Lower-case tracking handle evaluating player reputation standing with the Underking) **[Faction]**
+_Underking_           -> The Underking (The ancient, story-critical undead archmage character asset from the main questline) **[NPC] [Faction]**
+_underkingletter_     -> Underking's Letter (A critical narrative plot document or cryptic alliance request item) **[Item] [Delivery]**
+_underkingrevenge_    -> Underking's Revenge (An aggressive squad attack ambush wave triggered by betraying his shadow faction) **[Trigger] [Combat]**
+_upfront_             -> Upfront Payment (A partial gold bounty or dynamic down-payment advance item given before the job starts) **[Trigger] [Item]**
+_vamp_                -> Vampire Variant (The standard baseline syntax pointer referencing local coven combat enemies) **[NPC] [Combat]**
+_vamp1_               -> First Vampire target (Used in multi-coven execution or search arrays) **[NPC] [Combat]**
+_vamp2_               -> Second Vampire target layout combat identifier **[NPC] [Combat]**
+_vamp3_               -> Third Vampire target layout combat identifier **[NPC] [Combat]**
+_vampclearclick_      -> Vampire Interface Clear (A dialogue interaction loop variable resetting prompt menus) **[Trigger]**
+_vampclicked_         -> Vampire Talk Checked (The dialogue validation hook checking conversation initiation with a vampire) **[Trigger]**
+_vamphouse_           -> Vampire Hideout House (A standard urban citizen residence building text node overrun by coven units) **[Location]**
+_vampire_             -> Vampire Entity (The primary master layout hook assigned to individual script vampire encounters) **[NPC] [Combat]**
+_vampires_            -> Vampires Plural (A dynamic faction grouping spawning an entire wave or squad of bloodsucking enemies) **[NPC] [Combat]**
+_vampitem_            -> Vampiric Relic (A cursed magical object, ash pouch, or blood vial parcel item objective) **[Item] [Delivery]**
+_vampleader_          -> Vampire Bloodfather / Coven Patriarch (The final high-health target boss of a vampire hunt quest) **[NPC] [Combat]**
+_vampM_               -> Vampire Merchant / Master (A specific hidden underworld service provider or neutral vampire contact) **[NPC]**
+_vampMclicked_        -> Vampire Master Clicked (A dialogue verification hook tracking speech entry with an underworld merchant) **[Trigger]**
+_vampname_            -> Vampire Alias Name (A dynamic string value holding the hidden identity of a vampire suspect) **[NPC]**
+_vampproof_           -> Vampire Proof Artifact (A mandatory trophy item like a skull or ring proving a coven boss was slain) **[Item] [Delivery]**
+_vamprelic_           -> Vampire Relic Artifact (A unique ancient item objective with powerful curses or properties) **[Item]**
+_vampreward_          -> Vampiric Gift (A specialized occult reward tier feeding unique magic gear or faction infection flags) **[Trigger]**
+_vamprival_           -> Rival Vampire Coven (A specific combat antagonist from an opposing clan who blocks your path) **[NPC] [Combat]**
+_vampsecondclick_     -> Vampire Alternative Prompt (Dialogue validation handler checking for secondary branching choices) **[Trigger]**
+_vend_                -> Vendor Merchant (A general structural retail store operator or faction merchant anchor) **[NPC]**
+_victim_              -> Victim Hostage (The main target hostage, kidnap casualty, or missing person NPC objective) **[NPC] [Rescue]**
+_victimhouse_         -> Victim's House (The residential building cell layout belonging to the kidnapped character) **[Location]**
+_victin_              -> Victim In-Cell Check (Alternative tracking shorthand gate verifying a hostage has spawned in their cage) **[Trigger]**
+_victory_             -> Victory State Evaluation (The master validation tracking if all script markers are perfect for final hand-ins) **[Trigger]**
+_villager_            -> Urban Villager (A generic town resident citizen NPC contact, neighbor, or rumor mill source) **[NPC]**
+_villains_            -> Hostile Villains (A generic gang faction cluster spawning waves of brawlers or thieves) **[NPC] [Combat]**
+
+_warrior_          -> Warrior (A classic sword-and-shield physical human enemy variant or contact) **[NPC] [Combat]**
+_wayrest_          -> Wayrest Faction (Lower-case reference tracker checking reputation with King Eadwyre's kingdom) **[Faction]**
+_weapon_           -> Target Weapon (The primary physical weapon objective piece like a cursed claymore or lost dagger) **[Item]**
+_weapons_          -> Weapons Shipment (A bulk asset cluster bundle of non-magical steel arms used for military contracts) **[Item] [Delivery]**
+_week_             -> One Week Timer (A precise 7-day script deadline countdown increment block) **[Trigger]**
+_wereboar_         -> Wereboar (A powerful lycanthrope shape-shifter enemy that can transmit lycanthropy to the player) **[NPC] [Combat]**
+_wereBrother_      -> Lycanthrope Brother (A specific cursed werewolf faction relative target or contact NPC) **[NPC]**
+_werewolf_         -> Werewolf (A fast, hard-hitting shape-shifter enemy target immune to normal weapon types) **[NPC] [Combat]**
+_whip_             -> Leather Whip (A dynamic unique junk item, torture device, or specific dungeon asset container) **[Item]**
+_widow_            -> Grieving Widow (A lone female peasant citizen NPC contact or quest client anchor) **[NPC]**
+_widowhouse_       -> Widow's House (The residential home layout belonging to the isolated widow contact) **[Location]**
+_witch_            -> Witch Covenist (A neutral coven member NPC contact used to summon Daedric princes) **[NPC]**
+_witches_          -> Witches Coven (A dynamic coven network mapping group or wave of magic-using women) **[NPC] [Faction] [Combat]**
+_withouse_         -> Witness House (The specific building layout destination where an investigation eyewitness hides) **[Location]**
+_witness_          -> Eyewitness (The critical informant NPC contact who saw a crime occur and holds clue dialog strings) **[NPC]**
+_wizard_           -> Wizard / Archmage (A high-tier robe-wearing elemental spellcaster human enemy variant or contact) **[NPC] [Combat]**
+_wolf_             -> Timber Wolf (A basic wild animal enemy target commonly used to populate wilderness and early dungeons) **[NPC] [Combat]**
+_womensclothing_   -> Women's Clothing (A bundle delivery parcel containing dresses, robes, or fine silks) **[Item] [Delivery]**
+_woodsman_         -> Woodsman Ranger (A wilderness explorer, hunter, or reclusive hermit NPC contact) **[NPC]**
+_wraith_           -> Wraith (An elite, spell-casting floating undead ghost enemy immune to steel and iron blades) **[NPC] [Combat]**
+_wrappings_        -> Mummy Wrappings (A generic spooky cloth ingredient or alchemical quest relic item objective) **[Item]**
+_wrongdung_        -> Wrong Dungeon (A red-herring dungeon cave choice used to trick or detour the player character) **[Location]**
+_yes_              -> Affirmative Choice (The base confirmation dialogue option choice branch) **[Trigger]**
+_yes1_             -> First sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes10_            -> Tenth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes11_            -> Eleventh sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes12_            -> Twelfth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes13_            -> Thirteenth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes14_            -> Fourteenth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes15_            -> Fifteenth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes2_             -> Second sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes3_             -> Third sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes4_             -> Fourth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes5_             -> Fifth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes6_             -> Sixth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes6a_            -> Alternative branched sub-choice path for the sixth affirmative condition **[Trigger]**
+_yes7_             -> Seventh sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes8_             -> Eighth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yes9_             -> Ninth sequential affirmative narrative script milestone toggle **[Trigger]**
+_yesChoice_        -> Forced Affirmative Path (A logic prompt option bypassing selections to force a 'yes' state outcome) **[Trigger]**
+_yesmap_           -> Accept Coordinates Map (Dialogue selection branch triggering a land map target reveal) **[Trigger]**
+_youhavefailed_    -> Hard Failure State (The definitive terminal failure text screen execution block resetting trackers) **[Trigger]**
+_zen_              -> Resolution of Z'en (Data hook tracking favor with the Temple of the God of Labor and Commerce) **[Faction]**
+_zombie_           -> Zombie Corpse (A slow-moving flesh undead dungeon enemy with heavy disease infliction percentages) **[NPC] [Combat]**
+
