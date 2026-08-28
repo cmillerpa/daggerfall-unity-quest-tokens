@@ -1,0 +1,1183 @@
+==================================================
+DAGGERFALL UNITY PURE TASK VERB & SYNTAX REPORT
+Generated on: 8/27/2026 10:09:27 PM
+==================================================
+
+--- UNIQUE EXECUTABLE VERBS & TASK STRUCTURES ---
+[RESOURCE] [NUMBER]
+[RESOURCE] task:
+[RESOURCE] used do [RESOURCE]
+[RESOURCE] used do _S.02_
+[RESOURCE] used do _S.03_
+[RESOURCE] used do _S.05_
+[RESOURCE] used do _S.06_
+[RESOURCE] used do _S.08_
+[RESOURCE] used do _S.10_
+[RESOURCE] used do _S.15_
+[RESOURCE] used do _S.19_
+[RESOURCE] used do _S.35_
+[RESOURCE] used do _S.45_
+_atTavern task:
+_entersAnywhere task:
+_I.00_ used do _S.01_
+_I.00_ used do _S.02_
+_I.00_ used do _S.04_
+_I.01_ used do _S.09_
+_I.01_ used do _S.34_
+_I.02_ used do _S.14_
+_I.03_ used do _S.11_
+_I.03_ used do _S.16_
+_I.03_ used do _S.27_
+_intro task:
+_S.00_ task:
+_S.01_ task:
+_S.01a_ task:
+_S.02_ task:
+_S.03_ task:
+_S.04_ task:
+_S.05_ task:
+_S.06_ task:
+_S.07_ task:
+_S.08_ task:
+_S.09_ task:
+_S.10_ task:
+_S.10a_ task:
+_S.11_ task:
+_S.12_ task:
+_S.13_ task:
+_S.14_ task:
+_S.15_ task:
+_S.16_ task:
+_S.16a_ task:
+_S.17_ task:
+_S.18_ task:
+_S.19_ task:
+_S.20_ task:
+_S.21_ task:
+_S.22_ task:
+_S.23_ task:
+_S.24_ task:
+_S.25_ task:
+_S.26_ task:
+_S.27_ task:
+_S.28_ task:
+_S.29_ task:
+_S.30_ task:
+_S.31_ task:
+_S.32_ task:
+_S.33_ task:
+_S.34_ task:
+_S.35_ task:
+_S.36_ task:
+_S.37_ task:
+_S.38_ task:
+_S.39_ task:
+_S.40_ task:
+_S.41_ task:
+_S.42_ task:
+_S.43_ task:
+_S.44_ task:
+_S.45_ task:
+_S.46_ task:
+_S.54_ task:
+_S.55_ task:
+_S.56_ task:
+_S.57_ task:
+add [RESOURCE] as questor
+add [RESOURCE] face
+add [RESOURCE] face saying [NUMBER]
+add Barenziah as questor
+add Brisienna as questor
+add dialog for item [RESOURCE]
+add dialog for item signetRing
+add dialog for location [RESOURCE]
+add dialog for location [RESOURCE] person [RESOURCE]
+add dialog for person [RESOURCE]
+add dialog for person [RESOURCE] item [RESOURCE]
+add dialog for person Castellian
+add dialog for person ladyBrisienna
+add Eadwyre as questor
+add foe [RESOURCE] face
+add Gortwog as questor
+AkorithiEnding _S.13_
+AkorithiGotTotem _S.06_
+AkorithiGotTotem _S.08_
+AkorithiGotTotem _S.30_
+BarenziahSatisfied _S.08_
+BarenziahSatisfied _S.19_
+BrisiennaEnding _S.10_
+BrisiennaGotTotem _S.03_
+BrisiennaGotTotem _S.09_
+BrisiennaGotTotem _S.11_
+BrisiennaGotTotem _S.32_
+cast Banish_Daedra spell do [RESOURCE]
+cast Banish_Daedra spell on [RESOURCE]
+cast Free_Action spell on [RESOURCE]
+cast Gods'_Fire spell on [RESOURCE]
+cast Heal spell on [RESOURCE]
+cast Heal spell on Woodborne
+cast Invisibility spell on [RESOURCE]
+cast Lightning spell on [RESOURCE]
+cast Open spell do _S.07_
+cast Shield spell on [RESOURCE]
+cast Shield spell on Woodborne
+cast Silence spell on [RESOURCE]
+cast Sleep spell do [RESOURCE]
+cast Spell_Absorption spell on [RESOURCE]
+cast Spell_Reflection spell on [RESOURCE]
+cast Spell_Reflection spell on Woodborne
+cast Spell_Shield spell on [RESOURCE]
+cast Spider_Touch spell on [RESOURCE]
+cast Troll's_Blood spell on [RESOURCE]
+change repute with [RESOURCE] by -[NUMBER]
+change repute with [RESOURCE] by +[NUMBER]
+change repute with _P.05_ by +[NUMBER]
+change repute with Barenziah by -[NUMBER]
+change repute with Barenziah by +[NUMBER]
+change repute with Castellian by -[NUMBER]
+change repute with courtier by +[NUMBER]
+change repute with Eadwyre by -[NUMBER]
+change repute with Eadwyre by +[NUMBER]
+change repute with Gothryd by -[NUMBER]
+change repute with KingOfWorms0 by +[NUMBER]
+change repute with KingOfWorms3 by -[NUMBER]
+change repute with ladyBrisienna by -[NUMBER]
+clear [RESOURCE]
+clear [RESOURCE] [RESOURCE]
+clear [RESOURCE] [RESOURCE] [RESOURCE] [RESOURCE]
+clear [RESOURCE] _S.02_
+clear [RESOURCE] _S.03_
+clear [RESOURCE] _S.04_
+clear [RESOURCE] _S.05_
+clear [RESOURCE] _S.08_
+clear [RESOURCE] _S.10_
+clear _S.00_
+clear _S.00_ _S.10_
+clear _S.01_ [RESOURCE]
+clear _S.01_ _S.00_
+clear _S.01_ _S.03_
+clear _S.01_ _S.05_
+clear _S.02_
+clear _S.02_ [RESOURCE]
+clear _S.02_ _S.04_
+clear _S.03_
+clear _S.03_ [RESOURCE]
+clear _S.03_ _S.04_
+clear _S.04_
+clear _S.04_ [RESOURCE]
+clear _S.04_ _S.06_
+clear _S.05_ [RESOURCE]
+clear _S.06_
+clear _S.06_ [RESOURCE]
+clear _S.06_ _S.05_
+clear _S.08_
+clear _S.08_ [RESOURCE]
+clear _S.08_ _S.09_ _S.10_
+clear _S.09_
+clear _S.10_
+clear _S.10_ _S.07_
+clear _S.11_
+clear _S.11_ [RESOURCE] [RESOURCE]
+clear _S.12_ [RESOURCE]
+clear _S.12_ _S.13_
+clear _S.13_
+clear _S.13_ [RESOURCE]
+clear _S.13_ _S.19_
+clear _S.15_
+clear _S.17_
+clear _S.18_
+clear _S.18_ [RESOURCE]
+clear _S.21_ [RESOURCE]
+clear _S.25_ _S.23_ _S.24_
+clear _S.33_
+clear _S.50_
+clear _S.50_ _S.57_ _S.53_ _S.56_
+clear _S.52_ _S.51_ _S.54_ _S.55_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do [RESOURCE]
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.05_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.07_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.10_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.12_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.18_
+clicked [RESOURCE] and at least [NUMBER] gold otherwise do _S.34_
+clicked item [RESOURCE]
+clicked item [RESOURCE] say [NUMBER]
+clicked item [RESOURCE] say QuestorPostfailure
+clicked item _I.01_
+clicked item _I.02_
+clicked item _I.03_
+clicked item _I.04_
+clicked item Chapter6
+clicked item deathCertificate say [NUMBER]
+clicked item WoodborneDiary
+clicked npc [RESOURCE]
+clicked npc [RESOURCE] say [NUMBER]
+clicked npc [RESOURCE] say AcceptQuest
+clicked npc Barenziah
+clicked npc Brisienna
+clicked npc ladyBrisienna
+create foe [RESOURCE] every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe [RESOURCE] every [NUMBER] minutes [NUMBER] times with [NUMBER]% success msg [NUMBER]
+create foe [RESOURCE] every [NUMBER] minutes indefinitely with [NUMBER]% success
+create foe _F.00_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe _F.00_ every [NUMBER] minutes indefinitely with [NUMBER]% success
+create foe _F.01_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe _F.02_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe _F.03_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe _F.04_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe _F.05_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe imp0 every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create foe talisman every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+create npc [RESOURCE]
+create npc at [RESOURCE]
+cure lycanthropy
+cure Swamp_Rot
+cure vampirism
+cure Wizard_Fever
+daily from [TIME] to [TIME]
+destroy [RESOURCE]
+dialog link for item [RESOURCE]
+dialog link for item signetRing
+dialog link for location [RESOURCE]
+dialog link for location [RESOURCE] person [RESOURCE]
+dialog link for location [RESOURCE] person [RESOURCE] item [RESOURCE]
+dialog link for location _L.00_
+dialog link for location glenmorilCoven person [RESOURCE]
+dialog link for location orcCastle person [RESOURCE]
+dialog link for person [RESOURCE]
+dialog link for person [RESOURCE] item [RESOURCE]
+dialog link for person [RESOURCE] item talisman
+dialog link for person _P.05_
+dialog link for person Castellian
+dialog link for person ladyBrisienna
+dialog link for person necromancer
+dialog link for person underking
+drop [RESOURCE] as questor
+drop [RESOURCE] face
+drop Barenziah as questor
+drop Brisienna as questor
+drop Eadwyre as questor
+drop foe [RESOURCE] face
+drop Gortwog as questor
+dropped [RESOURCE] at [RESOURCE]
+dropped [RESOURCE] at [RESOURCE] saying [NUMBER]
+EadwyreEnding _S.15_
+EadwyreGotTotem _S.08_
+EadwyreGotTotem _S.10_
+EadwyreGotTotem _S.36_
+ElysannaSatisfied _S.06_
+ElysannaSatisfied _S.07_
+ElysannaSatisfied _S.43_
+end quest
+falseAide0 task:
+FinishedMantellanCrux _S.01_
+FinishedMantellanCrux _S.05_
+FinishedMantellanCrux _S.15_
+get item [RESOURCE]
+get item [RESOURCE] saying [NUMBER]
+get item _I.00_
+get item _I.01_
+get item _I.02_
+get item _I.03_
+get item _I.04_
+get item _I.06_
+get item _I.07_
+get item _I.09_
+get item _I.12_
+get item _note
+get item GortwogsLetter
+get item letter13
+get item letter31
+get item letter39
+get item letter41
+get item letter42
+get item letter43
+get item letter44
+get item research1
+get item research2
+get item signetRing
+get item talisman
+get item totemReward1
+get item totemReward2
+get item totemReward3
+get item totemReward4
+give item [RESOURCE] to [RESOURCE]
+give item [RESOURCE] to _F.00_
+give item [RESOURCE] to _F.01_
+give item [RESOURCE] to _F.03_
+give item [RESOURCE] to talisman
+give item _I.01_ to [RESOURCE]
+give item _I.03_ to [RESOURCE]
+give item _I.04_ to [RESOURCE]
+give item _I.05_ to [RESOURCE]
+give item letter47 to _F.00_
+give item research1 to [RESOURCE]
+give pc [RESOURCE]
+give pc [RESOURCE] notify [NUMBER]
+give pc [RESOURCE] silently
+give pc _I.00_ notify [NUMBER]
+give pc _I.01_
+give pc _I.01_ notify [NUMBER]
+give pc _I.02_ notify [NUMBER]
+give pc engagement notify [NUMBER]
+give pc letter14 notify [NUMBER]
+give pc letter34 notify [NUMBER]
+give pc letter35 notify [NUMBER]
+give pc letter36 notify [NUMBER]
+give pc letter37 notify [NUMBER]
+give pc letter38 notify [NUMBER]
+give pc letter40 notify [NUMBER]
+give pc letter48 notify [NUMBER]
+give pc nothing
+give pc stopMainQuest notify [NUMBER]
+give pc totemLetter1 notify [NUMBER]
+give pc totemLetter3 notify [NUMBER]
+give pc totemLetter4 notify [NUMBER]
+give pc totemLetter5 notify [NUMBER]
+give pc totemLetter6 notify [NUMBER]
+GortwogEnding _S.12_
+GortwogGotTotem _S.05_
+GortwogGotTotem _S.07_
+GortwogGotTotem _S.34_
+GothrydEnding _S.09_
+GothrydGotTotem _S.02_
+GothrydGotTotem _S.03_
+GothrydGotTotem _S.05_
+GothrydGotTotem _S.11_
+GothrydGotTotem _S.31_
+have [RESOURCE] set [RESOURCE]
+have [RESOURCE] set _S.01_
+have [RESOURCE] set _S.03_
+have [RESOURCE] set _S.05_
+have [RESOURCE] set _S.06_
+have [RESOURCE] set _S.07_
+have [RESOURCE] set _S.08_
+have [RESOURCE] set _S.09_
+have [RESOURCE] set _S.10_
+have [RESOURCE] set _S.11_
+have [RESOURCE] set _S.12_
+have [RESOURCE] set _S.14_
+have [RESOURCE] set _S.15_
+have [RESOURCE] set _S.16a_
+have [RESOURCE] set _S.18_
+have [RESOURCE] set _S.19_
+have [RESOURCE] set _S.20_
+have [RESOURCE] set _S.25_
+have _I.00_ set _S.09_
+have _I.01_ set [RESOURCE]
+have _I.02_ set [RESOURCE]
+have _I.04_ set [RESOURCE]
+have _I.05_ set [RESOURCE]
+have _I.06_ set _S.24_
+have engagement set _S.10_
+have letter36 set _S.13_
+hide npc [RESOURCE]
+hide npc Castellian
+injured [RESOURCE]
+injured [RESOURCE] saying [NUMBER]
+injured _F.00_
+injured _F.00_ saying [NUMBER]
+injured _F.01_
+injured _F.01_ saying [NUMBER]
+injured _F.02_
+injured _F.02_ saying [NUMBER]
+injured _F.03_
+injured _F.03_ saying [NUMBER]
+injured _F.04_
+injured _F.04_ saying [NUMBER]
+injured _F.05_
+injured Woodborne
+juggle [NUMBER] apples every [NUMBER] seconds drop [NUMBER]%
+killed [NUMBER] [RESOURCE]
+killed [NUMBER] [RESOURCE] saying [NUMBER]
+killed [NUMBER] _F.00_
+killed [NUMBER] _F.00_ saying [NUMBER]
+killed [NUMBER] _F.01_
+killed [NUMBER] _F.01_ saying [NUMBER]
+killed [NUMBER] _F.02_
+killed [NUMBER] _F.02_ saying [NUMBER]
+killed [NUMBER] _F.03_
+killed [NUMBER] _F.03_ saying [NUMBER]
+killed [NUMBER] _F.04_
+killed [NUMBER] boar saying [NUMBER]
+killed [NUMBER] Woodborne
+killed [RESOURCE]
+killed _F.03_
+KingOfWormsEnding _S.11_
+KingOfWormsGotTotem _S.04_
+KingOfWormsGotTotem _S.06_
+KingOfWormsGotTotem _S.13_
+KingOfWormsGotTotem _S.33_
+KingOfWormsSatisfied _S.12_
+KingOfWormsSatisfied _S.14_
+legal repute -[NUMBER]
+legal repute +[NUMBER]
+letter31 used do _S.11_
+letter34 used do _S.15_
+letter35 used do _S.16_
+letter36 used do _S.12_
+letter37 used do _S.14_
+letter39 used do _S.07_
+letter41 used do _S.21_
+letter42 used do _S.07_
+level [NUMBER] completed
+LiftedCurse _S.00_
+LiftedCurse _S.08_
+LiftedCurse _S.09_
+LiftedCurse _S.48_
+location [RESOURCE] [NUMBER] [NUMBER]
+log [NUMBER] step [NUMBER]
+LysandusSatisfied _S.04_
+make [RESOURCE] permanent
+make _I.01_ permanent
+make _I.02_ permanent
+make _I.03_ permanent
+make _I.04_ permanent
+make _I.05_ permanent
+make _I.06_ permanent
+make _I.07_ permanent
+make _I.12_ permanent
+make _note permanent
+make letter43 permanent
+make pc ill with Caliron's_Curse saying [NUMBER]
+make pc ill with Swamp_Rot
+make pc ill with Witches'_Pox
+make pc ill with Wizard_Fever
+make totemReward1 permanent
+make totemReward2 permanent
+make totemReward3 permanent
+make totemReward4 permanent
+map2 used do _S.16_
+MedoraGotHorn _S.10_
+MetLadyBrisienna _S.06_
+MetLadyBrisienna _S.44_
+MorgiahSatisfied _S.01_
+MorgiahSatisfied _S.08_
+mute npc [RESOURCE]
+mute npc Vhosek
+MyniseraSatisfied _S.07_
+MyniseraSatisfied _S.10_
+MyniseraSatisfied _S.47_
+OpenedShapeshifters _S.58_
+pc at [RESOURCE] set [RESOURCE]
+pc at [RESOURCE] set _S.00_
+pc at [RESOURCE] set _S.00_ saying [NUMBER]
+pc at [RESOURCE] set _S.01_
+pc at [RESOURCE] set _S.01_ saying [NUMBER]
+pc at [RESOURCE] set _S.02_
+pc at [RESOURCE] set _S.02_ saying [NUMBER]
+pc at [RESOURCE] set _S.03_
+pc at [RESOURCE] set _S.03_ saying [NUMBER]
+pc at [RESOURCE] set _S.04_
+pc at [RESOURCE] set _S.05_
+pc at [RESOURCE] set _S.06_
+pc at [RESOURCE] set _S.07_
+pc at [RESOURCE] set _S.08_
+pc at [RESOURCE] set _S.09_
+pc at [RESOURCE] set _S.10_
+pc at [RESOURCE] set _S.11_
+pc at [RESOURCE] set _S.12_
+pc at [RESOURCE] set _S.13_
+pc at [RESOURCE] set _S.14_
+pc at [RESOURCE] set _S.16_
+pc at [RESOURCE] set _S.19_
+pc at [RESOURCE] set _S.25_
+pc at [RESOURCE] set _S.26_
+pc at _L.00_ set _S.12_
+pc at _tavern set _atTavern
+pc at glenmorilCoven set _S.30_
+pc at pirateerHold set [RESOURCE]
+pc at PiratesHold set [RESOURCE]
+pick one of [RESOURCE] [RESOURCE]
+pick one of [RESOURCE] [RESOURCE] [RESOURCE]
+pick one of [RESOURCE] [RESOURCE] [RESOURCE] [RESOURCE]
+pick one of [RESOURCE] [RESOURCE] _S.04_ _S.04_
+pick one of [RESOURCE] _S.01_
+pick one of [RESOURCE] _S.02_
+pick one of [RESOURCE] _S.04_ _S.04_
+pick one of [RESOURCE] _S.09_ _S.09_
+pick one of _S.00_ _S.01_ _S.02_
+pick one of _S.00_ _S.02_ _S.03_ _S.01_
+pick one of _S.01_ _S.02_ _S.01_ _S.02_
+pick one of _S.01_ _S.02_ _S.03_ _S.04_
+pick one of _S.01_ _S.02_ _S.14_ _S.03_
+pick one of _S.01_ _S.10_
+pick one of _S.02_ [RESOURCE] [RESOURCE] _S.03_
+pick one of _S.02_ [RESOURCE] _S.04_ _S.05_
+pick one of _S.02_ _S.01_
+pick one of _S.02_ _S.03_ _S.04_ _S.05_
+pick one of _S.04_ _S.02_ _S.03_ _S.05_
+pick one of _S.04_ _S.05_
+pick one of _S.04_ _S.05_ _S.06_ _S.07_
+pick one of _S.05_ _S.05_ _S.04_
+pick one of _S.05_ _S.06_ _S.07_ _S.08_
+pick one of _S.06_ _S.07_
+pick one of _S.06_ _S.07_ [RESOURCE] _S.09_
+pick one of _S.06_ _S.07_ _S.08_
+pick one of _S.06_ _S.07_ _S.08_ [RESOURCE]
+pick one of _S.06_ _S.07_ _S.08_ _S.09_
+pick one of _S.08_ _S.09_ _S.33_
+pick one of _S.10_ _S.10_ _S.11_ _S.11_
+pick one of _S.10_ _S.11_
+pick one of _S.11_ _S.12_ _S.13_ _S.14_
+pick one of _S.13_ _S.12_ _S.13_ _S.12_
+pick one of _S.13_ _S.24_
+pick one of _S.14_ _S.15_ _S.15_ _S.15_
+pick one of _S.41_ _S.41_ _S.40_ _S.41_
+play sound spell[RESOURCE]lightning every [NUMBER] minutes [NUMBER] times
+play sound vengence [NUMBER] [NUMBER]
+play video [NUMBER]
+prompt [NUMBER] yes [RESOURCE] no [RESOURCE]
+prompt [NUMBER] yes [RESOURCE] no _S.14_
+prompt [NUMBER] yes _S.01_ no _S.02_
+prompt [NUMBER] yes _S.02_ no _S.03_
+prompt [NUMBER] yes _S.03_ no _S.04_
+prompt [NUMBER] yes _S.03_ no _S.05_
+prompt [NUMBER] yes _S.04_ no _S.05_
+prompt [NUMBER] yes _S.05_ no [RESOURCE]
+prompt [NUMBER] yes _S.05_ no _S.06_
+prompt [NUMBER] yes _S.07_ no _S.04_
+prompt [NUMBER] yes _S.07_ no _S.08_
+prompt [NUMBER] yes _S.08_ no [RESOURCE]
+prompt [NUMBER] yes _S.08_ no _S.09_
+prompt [NUMBER] yes _S.09_ no [RESOURCE]
+prompt [NUMBER] yes _S.09_ no _S.10_
+prompt [NUMBER] yes _S.10_ no _S.11_
+prompt [NUMBER] yes _S.11_ no [RESOURCE]
+prompt [NUMBER] yes _S.12_ no _S.11_
+prompt [NUMBER] yes _S.13_ no _S.11_
+prompt [NUMBER] yes _S.13_ no _S.14_
+prompt [NUMBER] yes _S.14_ no _S.15_
+prompt [NUMBER] yes _S.17_ no _S.18_
+prompt [NUMBER] yes _S.17_ no _S.19_
+prompt [NUMBER] yes _S.18_ no _S.20_
+prompt [NUMBER] yes _S.23_ no _S.24_
+prompt [NUMBER] yes _S.28_ no _S.29_
+prompt [NUMBER] yes yes no [RESOURCE]
+prompt QuestorOffer yes [RESOURCE] no [RESOURCE]
+prompt QuestorOffer yes yes no [RESOURCE]
+remove foe [RESOURCE]
+remove foe _F.03_
+remove foe _F.04_
+remove log step [NUMBER]
+repute with [RESOURCE] exceeds [NUMBER] do [RESOURCE]
+repute with [RESOURCE] exceeds [NUMBER] do _S.00_
+repute with [RESOURCE] exceeds [NUMBER] do _S.01_
+repute with [RESOURCE] exceeds [NUMBER] do _S.02_
+repute with [RESOURCE] exceeds [NUMBER] do _S.03_
+repute with [RESOURCE] exceeds [NUMBER] do _S.04_
+repute with [RESOURCE] exceeds [NUMBER] do _S.05_
+repute with [RESOURCE] exceeds [NUMBER] do _S.07_
+repute with [RESOURCE] exceeds [NUMBER] do _S.08_
+repute with [RESOURCE] exceeds [NUMBER] do _S.09_
+repute with [RESOURCE] exceeds [NUMBER] do _S.11_
+repute with [RESOURCE] exceeds [NUMBER] do _S.16_
+repute with [RESOURCE] exceeds [NUMBER] do _S.25_
+repute with [RESOURCE] exceeds [NUMBER] do _S.28_
+repute with [RESOURCE] exceeds [NUMBER] do _S.30_
+repute with _aubk-i_ exceeds [NUMBER] do _S.01_
+repute with _P.03_ exceeds [NUMBER] do _S.11_
+repute with _P.05_ exceeds [NUMBER] do _S.11_
+repute with Eadwyre exceeds [NUMBER] do [RESOURCE]
+repute with Gortwog exceeds [NUMBER] do [RESOURCE]
+repute with necromancer exceeds [NUMBER] do [RESOURCE]
+repute with underking exceeds [NUMBER] do [RESOURCE]
+restore [RESOURCE]
+restrain foe [RESOURCE]
+restrain foe _F.00_
+restrain foe _F.01_
+restrain foe _F.02_
+restrain foe _F.03_
+reveal [RESOURCE]
+reveal [RESOURCE] in province [NUMBER] at [NUMBER]
+reveal [RESOURCE] readmap
+reveal [RESOURCE] saying [NUMBER]
+reveal _L.00_
+reveal _L.05_
+reveal glenmorilCoven in province [NUMBER] at [NUMBER]
+reveal kykosCoven in province [NUMBER] at [NUMBER]
+reveal totambuCoven in province [NUMBER] at [NUMBER]
+reveal WoodbourneHall1 in province [NUMBER] at [NUMBER]
+rumor mill [NUMBER]
+say [NUMBER]
+say AcceptQuest
+say QuestFail
+say QuestorOffer
+say QuestorPostsuccess
+say RefuseQuest
+send [RESOURCE] every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+send [RESOURCE] every [NUMBER] minutes with [NUMBER]% success
+send _F.00_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+send _F.01_ every [NUMBER] minutes [NUMBER] times with [NUMBER]% success
+setvar [RESOURCE]
+setvar hat
+setvar run
+setvar shades
+start quest [NUMBER] [NUMBER]
+start task [RESOURCE]
+start task _S.01_
+start task _S.01a_
+start task _S.02_
+start task _S.03_
+start task _S.04_
+start task _S.06_
+start task _S.07_
+start task _S.08_
+start task _S.14_
+start task _S.18_
+start task _S.19_
+start task _S.31_
+start timer [RESOURCE]
+start timer _S.00_
+start timer _S.01_
+start timer _S.02_
+start timer _S.03_
+start timer _S.04_
+start timer _S.05_
+start timer _S.06_
+start timer _S.07_
+start timer _S.08_
+start timer _S.09_
+start timer _S.10_
+start timer _S.11_
+start timer _S.12_
+start timer _S.13_
+start timer _S.14_
+start timer _S.15_
+start timer _S.16_
+start timer _S.18_
+start timer _S.21_
+start timer _S.22_
+start timer _S.26_
+start timer _S.27_
+start timer _S.30_
+start timer _S.31_
+start timer _S.32_
+start timer _S.35_
+stop timer [RESOURCE]
+stop timer _S.01_
+stop timer _S.02_
+stop timer _S.04_
+stop timer _S.05_
+stop timer _S.06_
+stop timer _S.07_
+stop timer _S.10_
+take [RESOURCE] from pc
+take [RESOURCE] from pc saying [NUMBER]
+take _I.00_ from pc
+take _I.01_ from pc
+take _I.02_ from pc
+take _I.04_ from pc
+take _I.05_ from pc
+take signetRing from pc
+take talisman from pc saying [NUMBER]
+talisman used do _S.06_
+teleport pc to [RESOURCE]
+teleport pc to _L.00_
+teleport pc to _L.05_
+TookTheCure _S.50_
+totemLetter5 task:
+totemReward2 task:
+toting [RESOURCE] and [RESOURCE] clicked
+toting [RESOURCE] and [RESOURCE] clicked saying [NUMBER]
+toting [RESOURCE] and Brisienna clicked
+toting [RESOURCE] and Eadwyre clicked
+toting [RESOURCE] and Gortwog clicked
+toting _I.00_ and [RESOURCE] clicked
+toting _I.00_ and Castellian clicked saying [NUMBER]
+toting _I.01_ and [RESOURCE] clicked
+toting _I.02_ and [RESOURCE] clicked
+toting _I.03_ and [RESOURCE] clicked
+toting _I.04_ and [RESOURCE] clicked
+toting _I.09_ and [RESOURCE] clicked
+toting Chapter6 and [RESOURCE] clicked
+toting Chapter6 and Barenziah clicked
+toting deathCertificate and [RESOURCE] clicked
+toting deathCertificate and Vhosek clicked
+toting EmperorsLetter and [RESOURCE] clicked
+toting GortwogsLetter and [RESOURCE] clicked
+toting horn and [RESOURCE] clicked
+toting letter13 and [RESOURCE] clicked
+toting letter36 and [RESOURCE] clicked
+toting letter39 and Castellian clicked
+toting letter39 and Eadwyre clicked
+toting letter41 and [RESOURCE] clicked
+toting letter42 and Castellian clicked
+toting letter42 and Eadwyre clicked
+toting letter44 and [RESOURCE] clicked saying [NUMBER]
+toting research1 and [RESOURCE] clicked
+toting research2 and [RESOURCE] clicked
+toting signetRing and [RESOURCE] clicked
+toting talisman and [RESOURCE] clicked
+toting WoodborneDiary and [RESOURCE] clicked
+toting WoodborneDiary and Barenziah clicked
+toting WoodborneDiary and Eadwyre clicked
+toting WoodborneDiary and Gothryd clicked
+toting WoodborneDiary and KingOfWorms0 clicked
+transfer pc inside [RESOURCE] marker [NUMBER]
+transfer pc inside _L.00_ marker [NUMBER]
+UnderkingEnding _S.14_
+UnderkingGotTotem _S.07_
+UnderkingGotTotem _S.09_
+UnderkingGotTotem _S.35_
+UnknownElysanna _S.06_
+UnknownHelseth _S.17_
+unset [RESOURCE]
+unset _S.00_
+unset _S.01_
+unset _S.02_
+unset _S.03_
+unset _S.04_
+unset _S.05_
+unset _S.06_
+unset _S.06_ _S.08_ _S.04_ _S.07_
+unset _S.06_ _S.33_
+unset _S.08_
+unset _S.08_ [RESOURCE]
+unset _S.12_
+unset _S.13_
+unset _S.24_
+unset _S.30_
+unset _S.30_ _S.23_ _S.06_
+unset _S.34_ _S.27_ _S.02_
+until [RESOURCE] performed:
+until _S.00_ performed:
+until _S.01_ performed:
+until _S.02_ performed:
+until _S.03_ performed:
+until _S.04_ performed:
+until _S.05_ performed:
+until _S.06_ performed:
+until _S.07_ performed:
+until _S.11_ performed:
+until _S.12_ performed:
+variable [RESOURCE]
+variable _S.00_
+variable _S.01_
+variable _S.02_
+variable _S.03_
+variable _S.04_
+variable _S.05_
+variable _S.06_
+variable _S.07_
+variable _S.08_
+variable _S.09_
+variable _S.10_
+variable _S.11_
+variable _S.12_
+variable _S.13_
+variable _S.14_
+variable _S.15_
+variable _S.16_
+variable _S.18_
+variable _S.19_
+variable _S.20_
+variable _S.21_
+variable _S.22_
+variable _S.24_
+variable _S.25_
+variable _S.30_
+variable _S.31_
+variable _S.33_
+variable _S.35_
+variable _S.51_
+variable _S.52_
+variable _S.53_
+variable Castellian
+variable hat
+variable mainquestclock
+variable run
+variable shades
+variable yes
+when [RESOURCE]
+when [RESOURCE] and [RESOURCE]
+when [RESOURCE] and [RESOURCE] and [RESOURCE]
+when [RESOURCE] and [RESOURCE] and not [RESOURCE]
+when [RESOURCE] and [RESOURCE] and not [RESOURCE] and not [RESOURCE]
+when [RESOURCE] and [RESOURCE] and not _S.06_
+when [RESOURCE] and [RESOURCE] and not _S.10_
+when [RESOURCE] and _S.00_
+when [RESOURCE] and _S.01_
+when [RESOURCE] and _S.01_ and not _S.06_
+when [RESOURCE] and _S.02_
+when [RESOURCE] and _S.03_
+when [RESOURCE] and _S.04_
+when [RESOURCE] and _S.04_ and not [RESOURCE]
+when [RESOURCE] and _S.04_ and not _S.05_
+when [RESOURCE] and _S.05_
+when [RESOURCE] and _S.05_ and not _S.07_ and not _S.02_
+when [RESOURCE] and _S.06_
+when [RESOURCE] and _S.06_ and not _S.08_
+when [RESOURCE] and _S.07_
+when [RESOURCE] and _S.08_
+when [RESOURCE] and _S.09_
+when [RESOURCE] and _S.09_ and not [RESOURCE]
+when [RESOURCE] and _S.09_ and not _S.10_
+when [RESOURCE] and _S.10_ and not _S.06_
+when [RESOURCE] and _S.11_
+when [RESOURCE] and _S.13_
+when [RESOURCE] and _S.14_
+when [RESOURCE] and _S.15_
+when [RESOURCE] and _S.16_
+when [RESOURCE] and _S.18_
+when [RESOURCE] and _S.29_
+when [RESOURCE] and not [RESOURCE]
+when [RESOURCE] and not [RESOURCE] and [RESOURCE]
+when [RESOURCE] and not [RESOURCE] and not [RESOURCE]
+when [RESOURCE] and not [RESOURCE] and not [RESOURCE] and not [RESOURCE] and not [RESOURCE]
+when [RESOURCE] and not _S.00_
+when [RESOURCE] and not _S.01_
+when [RESOURCE] and not _S.01_ and not _S.07_
+when [RESOURCE] and not _S.02_
+when [RESOURCE] and not _S.03_
+when [RESOURCE] and not _S.04_
+when [RESOURCE] and not _S.04_ and not _S.05_ and not _S.06_ and not _S.07_
+when [RESOURCE] and not _S.05_
+when [RESOURCE] and not _S.05_ and not _S.04_
+when [RESOURCE] and not _S.06_
+when [RESOURCE] and not _S.07_
+when [RESOURCE] and not _S.09_
+when [RESOURCE] and not _S.09_ and not _S.07_ and not _S.17_
+when [RESOURCE] and not _S.11_
+when [RESOURCE] and not _S.13_
+when [RESOURCE] and not _S.15_ and _S.09_
+when [RESOURCE] and not _S.18_
+when [RESOURCE] and not _S.19_ and not _S.07_
+when [RESOURCE] and not _S.23_
+when [RESOURCE] or [RESOURCE]
+when [RESOURCE] or [RESOURCE] or [RESOURCE] or [RESOURCE]
+when [RESOURCE] or _S.15_ or _S.16_ or _S.17_ or _S.19_
+when [RESOURCE] or _S.16_ or _S.17_
+when _S.00_ and [RESOURCE]
+when _S.00_ and _S.01_
+when _S.00_ and _S.04_
+when _S.00_ and _S.06_ and not _S.05_
+when _S.00_ and _S.09_
+when _S.00_ and _S.11_
+when _S.00_ and _S.14_ and _S.15_
+when _S.00_ and _S.14_ and not _S.15_
+when _S.00_ and not _S.01_
+when _S.00_ and not _S.05_ and not _S.17_
+when _S.00_ and not _S.09_
+when _S.00_ and not _S.12_
+when _S.00_ and not _S.14_
+when _S.00_ or _S.01_ or _S.02_
+when _S.01_ and [RESOURCE]
+when _S.01_ and _S.00_
+when _S.01_ and _S.02_
+when _S.01_ and _S.02_ and [RESOURCE]
+when _S.01_ and _S.03_
+when _S.01_ and _S.03_ and [RESOURCE]
+when _S.01_ and _S.04_
+when _S.01_ and _S.04_ and [RESOURCE]
+when _S.01_ and _S.04_ and not _S.03_
+when _S.01_ and _S.05_
+when _S.01_ and _S.05_ and [RESOURCE]
+when _S.01_ and _S.05_ and not _S.03_
+when _S.01_ and _S.06_ and [RESOURCE]
+when _S.01_ and _S.06_ and not _S.03_
+when _S.01_ and _S.07_
+when _S.01_ and _S.07_ and [RESOURCE]
+when _S.01_ and _S.07_ and not _S.03_
+when _S.01_ and _S.08_ and [RESOURCE]
+when _S.01_ and _S.12_
+when _S.01_ and _S.13_ and _S.16_ and not _S.43_
+when _S.01_ and _S.13_ and not _S.16_
+when _S.01_ and not [RESOURCE]
+when _S.01_ and not _S.02_
+when _S.01_ and not _S.03_
+when _S.01_ and not _S.04_
+when _S.01_ and not _S.07_
+when _S.01_ and not _S.09_
+when _S.01_ and not _S.13_
+when _S.01_ and not _S.13_ and _S.00_
+when _S.01_ or [RESOURCE]
+when _S.01_ or not _S.02_
+when _S.02_ and [RESOURCE]
+when _S.02_ and _S.01_
+when _S.02_ and _S.03_
+when _S.02_ and _S.03_ and not [RESOURCE] and not _S.04_
+when _S.02_ and _S.04_
+when _S.02_ and _S.05_
+when _S.02_ and _S.07_
+when _S.02_ and _S.12_
+when _S.02_ and _S.12_ and _S.17_
+when _S.02_ and _S.12_ and not _S.17_
+when _S.02_ and _S.15_
+when _S.02_ and _S.23_
+when _S.02_ and not _S.01_
+when _S.02_ and not _S.03_
+when _S.02_ and not _S.05_
+when _S.02_ and not _S.07_
+when _S.02_ and not _S.08_
+when _S.02_ and not _S.12_
+when _S.03_ and [RESOURCE]
+when _S.03_ and [RESOURCE] and [RESOURCE]
+when _S.03_ and _S.01_
+when _S.03_ and _S.04_ and [RESOURCE]
+when _S.03_ and _S.05_
+when _S.03_ and _S.05_ and _S.16_ and [RESOURCE]
+when _S.03_ and _S.06_
+when _S.03_ and _S.07_
+when _S.03_ and _S.11_ and _S.18_
+when _S.03_ and _S.11_ and not _S.18_
+when _S.03_ and _S.12_ and not _S.04_
+when _S.03_ and _S.13_
+when _S.03_ and _S.24_
+when _S.03_ and not [RESOURCE]
+when _S.03_ and not _S.01_
+when _S.03_ and not _S.04_ and [RESOURCE]
+when _S.03_ and not _S.07_
+when _S.03_ and not _S.11_
+when _S.03_ or [RESOURCE]
+when _S.03_ or _S.04_ or _S.00_
+when _S.03_ or _S.04_ or _S.05_ or _S.06_
+when _S.04_ and [RESOURCE]
+when _S.04_ and _S.00_
+when _S.04_ and _S.02_
+when _S.04_ and _S.03_
+when _S.04_ and _S.05_
+when _S.04_ and _S.05_ and _S.06_ and _S.07_
+when _S.04_ and _S.06_
+when _S.04_ and _S.07_
+when _S.04_ and _S.08_ and _S.07_
+when _S.04_ and _S.08_ and not _S.07_
+when _S.04_ and _S.10_ and not _S.19_
+when _S.04_ and _S.21_
+when _S.04_ and not [RESOURCE]
+when _S.04_ and not _S.00_
+when _S.04_ and not _S.01_
+when _S.04_ and not _S.02_
+when _S.04_ and not _S.03_
+when _S.04_ and not _S.03_ and not _S.07_
+when _S.04_ and not _S.05_
+when _S.04_ and not _S.06_
+when _S.04_ and not _S.07_
+when _S.04_ and not _S.10_
+when _S.04_ and not _S.14_
+when _S.04_ and not _S.19_ and not _S.08_
+when _S.04_ and not _S.21_
+when _S.04_ or _S.05_ or _S.06_ or _S.07_
+when _S.05_ and [RESOURCE]
+when _S.05_ and _S.02_
+when _S.05_ and _S.09_ and _S.20_ and not _S.47_
+when _S.05_ and _S.09_ and not _S.20_
+when _S.05_ and not _S.09_
+when _S.05_ and not _S.16_
+when _S.05_ or _S.04_
+when _S.05_ or _S.06_ or _S.07_ or _S.08_
+when _S.05_ or _S.07_ or _S.06_
+when _S.06_ and [RESOURCE]
+when _S.06_ and _S.01_
+when _S.06_ and _S.03_
+when _S.06_ and _S.04_ and _S.05_
+when _S.06_ and _S.05_
+when _S.06_ and _S.08_ and _S.21_
+when _S.06_ and _S.08_ and not _S.21_
+when _S.06_ and not [RESOURCE]
+when _S.06_ and not _S.02_
+when _S.06_ and not _S.08_
+when _S.06_ and yes and not [RESOURCE]
+when _S.06_ or _S.07_ or _S.09_ or _S.08_
+when _S.06_ or _S.10_
+when _S.06_ or _S.22_ or _S.31_ or _S.28_
+when _S.07_ and [RESOURCE]
+when _S.07_ and [RESOURCE] and not _S.01_
+when _S.07_ and _S.01_
+when _S.07_ and _S.02_
+when _S.07_ and _S.04_
+when _S.07_ and _S.08_
+when _S.07_ and _S.09_
+when _S.07_ and _S.21_
+when _S.07_ and _S.33_
+when _S.07_ and not [RESOURCE]
+when _S.07_ and not _S.08_
+when _S.07_ or _S.08_
+when _S.07_ or _S.08_ or _S.09_
+when _S.08_ and [RESOURCE]
+when _S.08_ and [RESOURCE] and _S.17_ and not _S.19_
+when _S.08_ and _S.03_
+when _S.08_ and _S.07_
+when _S.08_ and _S.10_
+when _S.08_ and _S.10_ and _S.12_
+when _S.08_ and not [RESOURCE]
+when _S.08_ and not [RESOURCE] and _S.19_ and not _S.14_
+when _S.08_ and not [RESOURCE] and not _S.17_
+when _S.08_ and not [RESOURCE] and not _S.17_ and _S.11_
+when _S.08_ and not [RESOURCE] and not _S.17_ and not _S.11_
+when _S.08_ and not _S.03_
+when _S.08_ and not _S.07_
+when _S.08_ and not _S.09_
+when _S.08_ and not _S.12_
+when _S.08_ or _S.01_
+when _S.08_ or _S.02_
+when _S.08_ or _S.09_ or _S.10_ or _S.11_ or _S.22_
+when _S.08_ or _S.15_
+when _S.08_ or _S.15_ or _S.18_
+when _S.09_ and _S.04_
+when _S.09_ and not _S.08_ and _S.04_
+when _S.09_ or _S.10_ or _S.11_
+when _S.09_ or _S.10_ or _S.11_ or _S.12_
+when _S.10_ and [RESOURCE]
+when _S.10_ and [RESOURCE] and not [RESOURCE]
+when _S.10_ and _S.07_
+when _S.10_ and _S.08_
+when _S.10_ and _S.09_
+when _S.10_ and _S.19_ and _S.04_
+when _S.10_ and not [RESOURCE]
+when _S.10_ and not _S.04_ and not [RESOURCE]
+when _S.10_ and not _S.05_ and not _S.06_
+when _S.10_ and not _S.08_
+when _S.10_ and not _S.09_
+when _S.10_ and not _S.12_
+when _S.10_ or [RESOURCE]
+when _S.10_ or _S.08_
+when _S.10_ or _S.11_
+when _S.11_ and [RESOURCE]
+when _S.11_ and _S.00_
+when _S.11_ and _S.05_
+when _S.11_ and _S.09_
+when _S.11_ and _S.18_
+when _S.11_ and not _S.05_
+when _S.11_ and not _S.09_ and _S.04_
+when _S.11_ and not _S.09_ and not _S.04_
+when _S.12_ and [RESOURCE] and [RESOURCE]
+when _S.12_ and _S.05_
+when _S.12_ and not _S.05_
+when _S.12_ and not _S.11_
+when _S.12_ or _S.11_
+when _S.12_ or _S.13_
+when _S.13_ and _S.05_
+when _S.13_ and _S.08_
+when _S.13_ and _S.20_
+when _S.13_ and not _S.03_
+when _S.13_ and not _S.05_
+when _S.13_ and not _S.08_ and _S.18_
+when _S.13_ or _S.14_ or _S.15_
+when _S.14_
+when _S.14_ and _S.03_
+when _S.14_ and _S.15_
+when _S.14_ and _S.16_
+when _S.14_ and _S.37_
+when _S.15_ and _S.02_
+when _S.15_ or [RESOURCE]
+when _S.15_ or _S.08_
+when _S.15_ or _S.18_
+when _S.15_ or _S.21_ or _S.22_
+when _S.16_ and [RESOURCE]
+when _S.16_ and _S.09_
+when _S.16_ and _S.15_
+when _S.16_ and not [RESOURCE]
+when _S.16_ and not _S.14_
+when _S.16_ and not _S.25_
+when _S.17_ and [RESOURCE]
+when _S.17_ and _S.02_
+when _S.17_ and _S.12_
+when _S.17_ and _S.16_
+when _S.17_ and _S.19_
+when _S.17_ and _S.20_
+when _S.17_ and _S.21_
+when _S.17_ and not _S.00_
+when _S.17_ or [RESOURCE] or [RESOURCE]
+when _S.18_ and _S.02_
+when _S.18_ and _S.08_ and not _S.22_
+when _S.18_ and _S.09_
+when _S.18_ and _S.10_
+when _S.18_ and _S.11_
+when _S.18_ and _S.22_
+when _S.18_ and _S.23_ and not _S.27_
+when _S.18_ and not _S.02_
+when _S.18_ or _S.19_
+when _S.19_ and _S.14_
+when _S.19_ and not [RESOURCE]
+when _S.20_ and _S.21_
+when _S.20_ or _S.22_ or _S.21_
+when _S.21_ and not _S.19_
+when _S.21_ or [RESOURCE]
+when _S.21_ or _S.24_
+when _S.22_ and _S.17_
+when _S.22_ and _S.18_
+when _S.22_ or _S.23_
+when _S.26_ or _S.27_ or _S.28_ or _S.29_
+when _S.27_ and not _S.37_ and not [RESOURCE] and _S.11_ and not _S.32_
+when _S.27_ and not _S.37_ and not [RESOURCE] and not _S.11_
+when _S.29_ and _S.30_
+when _S.29_ and not _S.30_
+when _S.30_ and _S.29_
+when _S.30_ or _S.31_ or _S.32_ or _S.33_ or _S.34_ or _S.35_ or _S.36_
+when _S.31_ and not _S.30_
+when _S.32_ and not _S.04_
+when _S.32_ or _S.38_
+when _S.34_ or _S.37_
+when _S.35_ and not _S.29_
+when _S.36_ and _S.30_
+when _S.39_ or _S.40_
+when _S.42_
+when _S.47_ and _S.48_
+when _S.50_
+when _S.51_
+when _S.52_
+when _S.53_
+when Cyndassa is available
+when hat and shades
+when Medora is available
+when not [RESOURCE] and [RESOURCE]
+when not [RESOURCE] and _S.07_ and not _S.01_
+when not [RESOURCE] and _S.18_
+when not [RESOURCE] and not [RESOURCE] and not [RESOURCE]
+when not _S.00_ and [RESOURCE]
+when not _S.00_ and _S.01_
+when not _S.00_ and _S.04_
+when not _S.01_ and _S.02_
+when not _S.01_ and _S.05_
+when not _S.01_ and _S.07_
+when not _S.02_ and _S.05_
+when not _S.03_ and [RESOURCE]
+when not _S.03_ and _S.06_
+when not _S.03_ and not _S.04_ and [RESOURCE]
+when not _S.03_ and not _S.04_ and not _S.05_
+when not _S.04_ and _S.02_
+when not _S.04_ and _S.08_ and not _S.07_
+when not _S.06_ and not _S.07_ and not _S.08_
+when not _S.07_ and [RESOURCE]
+when not _S.07_ and _S.21_
+when not _S.07_ and not [RESOURCE]
+when not _S.08_ and _S.07_
+when not _S.08_ and _S.10_
+when not _S.09_ and _S.11_
+when not _S.10_ and [RESOURCE]
+when not _S.11_ and [RESOURCE]
+when not _S.11_ and _S.10_
+when not _S.11_ and not _S.03_ and _S.05_
+when not _S.12_ and not _S.04_
+when not _S.13_ and not _S.00_
+when not _S.15_ or not _S.09_ or not _S.03_ or not _S.07_
+when not _S.17_ and _S.02_
+when not _S.17_ and _S.12_
+when pc enters anywhere
+when pc enters city
+when pc enters farmhome
+when pc enters poorhome
+when pc enters tavernhome
+when pc enters templehome
+when pc enters wealthyhome
+when pc exits anywhere
+when Prince_Helseth is available
+when Prince_Lhotun is available
+when Princess_Elysana is available
+when Princess_Morgiah is available
+when Queen_Aubk-i is available
+when repute with Cyndassa is at least [NUMBER]
+when repute with Medora is at least [NUMBER]
+when repute with Prince_Helseth is at least [NUMBER]
+when repute with Prince_Lhotun is at least [NUMBER]
+when repute with Princess_Elysana is at least [NUMBER]
+when repute with Princess_Morgiah is at least [NUMBER]
+when repute with Queen_Aubk-i is at least [NUMBER]
+when repute with Queen_Barenziah is at least [NUMBER]
+when run
+when wizard0 and [RESOURCE]
+when yes and not _S.13_
+wizard0 task:
+WoodborneDiary used do _S.01_
+yes task:
