@@ -12,3 +12,9 @@ Every token features consistent, bracketed category tags at the end of the line.
 
 
 Disclaimer: I let Gemini make the keywords to search these, and to define them all. I did not go through all the definitions. 
+
+
+Added a list of Verbs used in QBN: for creating Tasks in your quest files. It is pretty self explanitory. 
+
+Good Luck on your quest building journey,
+CM
